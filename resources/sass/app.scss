@@ -1,0 +1,106 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+
+// -------------CUSTOM CSS-----------------
+
+//global BGs and containers
+body {
+
+  background-color: #5c338a;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #2a285f;
+}
+
+
+// typography
+ul {
+  list-style-type: none;
+}
+
+ul li a {
+  color: #9cc34d;
+  font-size: 1.7em;
+}
+
+a.login {
+  font-size: 1em;
+}
+
+p, h3, h5 {
+  color: $font-grey;
+}
+
+h1, h2, h3, h4, h5, h6, footer a {
+  color: $link-green;
+}
+
+.h-with-link:hover {
+  color: $hover-blue;
+}
+
+.no-link-style {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// Posts section
+.box {
+  float:left;
+  width: 50%;
+  margin-right: 15px;
+}
+
+.post {
+  height: 100px;
+  overflow: hidden;
+}
+
+.read-more {
+  font-style: italic;
+  color: $fuxia;
+}
+
+
+// Subscribe section
+.subscribe {
+  margin: 0 auto;
+  width: 90%;
+  background-color: $fuxia;
+  border-radius: 8px;
+}
+
+
+// Video section
+.video {
+    margin: 0 auto;
+}
+
+
+// footer
+footer p {
+  color: $fuxia;
+}
+
+
+@media screen and (min-width: 768px) {
+  iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
