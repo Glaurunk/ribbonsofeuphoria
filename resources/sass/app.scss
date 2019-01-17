@@ -9,12 +9,11 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-
 // -------------CUSTOM CSS-----------------
 
-//global BGs and containers
+////////////// GLOBAL /////////////////
+// BGs and containers
 body {
-
   background-color: #5c338a;
 }
 
@@ -27,6 +26,51 @@ body {
   background-color: #2a285f;
 }
 
+//header
+.logo {
+  height: 45px;
+}
+
+.header-float {
+  clear: both;
+}
+
+.main-cols {
+  text-align: center;
+}
+
+.main-links-ul {
+  padding: 0;
+}
+
+.hidden {
+  display: flex;
+}
+
+.second-navbar {
+  display: none;
+}
+
+a.dropdown-item {
+  font-size: 1em;
+  color: #9cc34d;
+}
+
+a.big {
+  font-size: 1.2em;
+}
+
+.divider {
+  height: 30px;
+  clear:both;
+}
+
+
+// footer
+footer p, .fuxia, ol li {
+  color: $fuxia;
+}
+
 
 // typography
 ul {
@@ -35,18 +79,26 @@ ul {
 
 ul li a {
   color: #9cc34d;
-  font-size: 1.7em;
+  font-size: 1.4em;
 }
 
-a.login {
+.nav-link {
   font-size: 1em;
+}
+
+.font-size-2 {
+  font-size: 2em;
+}
+
+.font-size-3 {
+  font-size: 3em;
 }
 
 p, h3, h5 {
   color: $font-grey;
 }
 
-h1, h2, h3, h4, h5, h6, footer a {
+h1, h2, h3, h4, h5, h6, footer a, .green {
   color: $link-green;
 }
 
@@ -59,11 +111,18 @@ h1, h2, h3, h4, h5, h6, footer a {
   cursor: pointer;
 }
 
+
+//////// FRONT PAGE /////////////
+
+
 // Posts section
-.box {
+.calendar {
   float:left;
   width: 50%;
   margin-right: 15px;
+  background-color: $fuxia;
+  color: $link-green;
+  text-align: center;
 }
 
 .post {
@@ -92,15 +151,75 @@ h1, h2, h3, h4, h5, h6, footer a {
 }
 
 
-// footer
-footer p {
-  color: $fuxia;
+//////// BIO PAGE ///////////////////
+.bio-card {
+  max-width: 250px;
+  background-color: $bg-purple;
+  margin: 2em auto;
 }
+
+ ///////// SHOP /////////////////////
+
+
+
+
+/////////  MEDIA QUERIES //////////
 
 
 @media screen and (min-width: 768px) {
+
+  ul li a {
+    color: #9cc34d;
+    font-size: 1.6em;
+  }
+
+  .main-cols {
+    text-align: left;
+  }
+
+  .align-right {
+    margin-left: 5em;
+  }
+
   iframe {
     width: 560px;
     height: 315px;
   }
+
+  .logo {
+    height: 70px;
+  }
+
+  .header-float {
+    float:right;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .second-navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .divider {
+    height: 10px;
+    clear:both;
+  }
+
+}
+
+
+@media screen and (min-width: 995px) {
+
+  .align-right {
+    margin-left: 8em;
+  }
+
+  .logo {
+    height: 96px;
+  }
+
+
 }

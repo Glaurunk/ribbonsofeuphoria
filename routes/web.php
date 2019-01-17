@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,11 @@
 */
 Route::get('/', 'PagesController@home');
 Route::get('/policy', 'PagesController@policy');
+Route::get('/bio', 'PagesController@bio');
+Route::get('/music', 'PagesController@music');
+Route::get('/shop', 'PagesController@shop');
+Route::get('/blog', 'PagesController@blog');
+Route::get('/contact', 'PagesController@contact');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

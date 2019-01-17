@@ -18,10 +18,35 @@ class PagesController extends Controller
                   return view('policy')->with('title', $title);
               }
 
+    public function bio()
+              {
+                $title = "Biography";
+                return view('bio')->with('title', $title);
+              }
 
+    public function music()
+              {
+                  $title = "Music";
+                  return view('music')->with('title', $title);
+              }
 
+    public function shop()
+              {
+                  $title = "Shop";
+                  return view('shop')->with('title', $title);
+              }
 
+    public function blog()
+              {
+                $title = "Blog";
+                return view('blog')->with('title', $title);
+              }
 
+    public function contact()
+              {
+                $title = "Contact Us";
+                return view('contact')->with('title', $title);
+              }
 
 
 }
