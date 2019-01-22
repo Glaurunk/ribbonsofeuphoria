@@ -73,6 +73,12 @@
         </nav>
 
         <main class="py-4">
+
+          {{-- <div class="container alert alert-danger text-center py-3 mt-5">
+            <p class="">{{ $error }}</p>
+          </div> --}}
+
+            @include('layouts.messages')
             @yield('content')
         </main>
     </div>

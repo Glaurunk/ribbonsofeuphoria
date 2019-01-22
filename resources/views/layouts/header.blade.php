@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
         {{-- <link rel="stylesheet" href="css/customCSS.css"> --}}
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="js/customJS.js"></script>
-        <title>Ribbons of Euphoria | {{ $title }}</title>
+        {{-- <script src="js/customJS.js"></script> --}}
+        <title>Ribbons of Euphoria | @yield('title')</title>
 
     </head>
     <body>
@@ -83,11 +83,13 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/dashboard">Dashboard</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
+
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf

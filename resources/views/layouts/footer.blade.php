@@ -13,7 +13,7 @@
           </div><!-- here ends row -->
 
           <div class="text-center pb-5 mt-3">
-            <a href="/" class="no-link-style"><img src="images/ROE-logo-ART.png" alt="logo" style="width: 10%;"></a>
+            <a href="/" class="no-link-style"><img src="/images/ROE-logo-ART.png" alt="logo" style="width: 10%;"></a>
           </div>
         </footer>
 <!-- Here ends footer -->

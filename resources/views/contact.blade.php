@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('title', 'Contact Us')
 @section('content')
   <h3 class="mb-5 text-center">Contact the Ribbons</h3>
   <div class="ml-5">

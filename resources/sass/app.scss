@@ -26,6 +26,11 @@ body {
   background-color: #2a285f;
 }
 
+.indigo {
+  background-color: $indigo;
+}
+
+
 //header
 .logo {
   height: 45px;
@@ -78,7 +83,6 @@ ul {
 }
 
 ul li a {
-  color: #9cc34d;
   font-size: 1.4em;
 }
 
@@ -94,16 +98,17 @@ ul li a {
   font-size: 3em;
 }
 
-p, h3, h5 {
+p, .grey {
   color: $font-grey;
 }
 
-h1, h2, h3, h4, h5, h6, footer a, .green {
+h1, h2, h3, h4, h5, h6, a, .green {
   color: $link-green;
 }
 
-.h-with-link:hover {
+a:hover {
   color: $hover-blue;
+  text-decoration: none;
 }
 
 .no-link-style {
@@ -158,7 +163,40 @@ h1, h2, h3, h4, h5, h6, footer a, .green {
   margin: 2em auto;
 }
 
- ///////// SHOP /////////////////////
+///////// SHOW POSTS /////////////////////
+.bg-none {
+  background-color: inherit;
+  border: none;
+}
+
+ul.pagination li a {
+  background-color:inherit;
+}
+
+.page-link {
+  font-size: 1em;
+  border-color: $link-green;
+  color: $link-green;
+}
+
+.page-item.active .page-link {
+  background-color: $link-green;
+  border-color: $link-green;
+}
+
+.page-item.disabled .page-link {
+  background-color: inherit;
+  border-color: $link-green;
+
+}
+
+////////// DASHBOARD ////////////
+
+.event-box {
+  background-color: $fuxia;
+  border-radius: 8px;
+  width: 100%;
+}
 
 
 
@@ -169,7 +207,6 @@ h1, h2, h3, h4, h5, h6, footer a, .green {
 @media screen and (min-width: 768px) {
 
   ul li a {
-    color: #9cc34d;
     font-size: 1.6em;
   }
 

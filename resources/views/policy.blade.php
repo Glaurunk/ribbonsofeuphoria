@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('title', 'Privacy Policy')
 @section('content')
   <h1 class="text-center">Privacy Policy</h1>
 

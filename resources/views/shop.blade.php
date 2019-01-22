@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('title', 'Shop')
 @section('content')
   <h3 class="text-center mb-5">The Shop</h3>
 

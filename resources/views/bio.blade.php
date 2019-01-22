@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('title', 'Biographical Infoarmation')
 @section('content')
   <h3 class="text-center ">Biographical Information</h3>
   <br>

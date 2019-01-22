@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('title', 'The Music')
 @section('content')
   <h3 class="text-center">The Music</h3>
   <br>
@@ -22,7 +22,7 @@
       <h4 class="mb-3 text-center">Reaching for the Skies</h4>
         <iframe class="mb-3"style="border: 0; width: 350px; height: 522px;" src="https://bandcamp.com/EmbeddedPlayer/album=1029748364/size=large/bgcol=ffffff/linkcol=7137dc/transparent=true/" seamless><a href="http://ribbonsofeuphoria.bandcamp.com/album/reaching-for-the-skies">Reaching for the Skies by Ribbons of Euphoria</a></iframe>
         <div class="">
-          <p>A new Mini LP composed through 2016.</p>
+          <p>A Mini LP composed through 2016.</p>
           <p>released October 2, 2017</p>
           <p>Recorded at Experience Studio through 2016. <br>
             Mastered at Vintage Studio. <br>
