@@ -25,6 +25,8 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/dashboard', 'PagesController@dashboard');
 Route::get('/logout', 'PagesController@logout');
 
+// SUBSCRIBE!
+Route::resource('subscriptions', 'SubscriptionController');
 
 //POSTS
 Route::resource('posts', 'PostsController');
@@ -38,7 +40,6 @@ Route::get('/Insider', 'CategoriesController@Insider');
 Route::get('/Press', 'CategoriesController@Press');
 Route::get('/Etcetera', 'CategoriesController@Etcetera');
 
-//Authentication
-//Auth::routes(['register' => false]);
+//Authentication - Verification
+Auth::routes(['register' => false]);
 Auth::routes(['verify' => true]);
-// Route::get('/home', 'HomeController@index')->name('home');

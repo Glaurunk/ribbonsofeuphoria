@@ -10572,6 +10572,17 @@ ul li a {
   font-size: 3em;
 }
 
+.link-style:hover,
+a:hover {
+  color: #1d68a7;
+  text-decoration: none;
+}
+
+.no-link-style {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 p,
 .grey {
   color: #ddd;
@@ -10588,16 +10599,6 @@ a,
   color: #9cc34d;
 }
 
-a:hover {
-  color: #1d68a7;
-  text-decoration: none;
-}
-
-.no-link-style {
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .calendar {
   float: left;
   width: 50%;
@@ -10605,16 +10606,12 @@ a:hover {
   background-color: #aa2277;
   color: #9cc34d;
   text-align: center;
+  border-radius: 8px;
 }
 
 .post {
-  height: 100px;
-  overflow: hidden;
-}
-
-.read-more {
-  font-style: italic;
-  color: #aa2277;
+  height: 50px;
+  overflow: auto;
 }
 
 .subscribe {

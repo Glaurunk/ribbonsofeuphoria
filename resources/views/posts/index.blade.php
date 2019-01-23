@@ -22,7 +22,7 @@
               <form class="p-3" action="/posts/{{ $post->id}}" method="post">
                 {{ csrf_field() }}
                 {{ method_field('delete')}}
-                <button type="submit" name="button" class="btn btn-danger btn-sm">Delete Post</button>
+                <button type="submit" name="button" class="btn btn-danger btn-sm" onclick="confirmDelete()">Delete Post</button>
                 <a href="/posts/{{ $post->id}}/edit" class="btn btn-secondary btn-sm">Edit Post</a>
               </form>
             @endif

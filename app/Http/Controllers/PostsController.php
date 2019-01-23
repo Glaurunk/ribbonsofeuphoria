@@ -116,10 +116,10 @@ class PostsController extends Controller
 
     public function destroy(Post $post)
     {
-
       if ($post->cover_image != 'noimage.jpg') {
       Storage::delete('public/cover_images/'.$post->cover_image);
      }
+      dd($post);
       $post->delete();
       return redirect()->action('PagesController@dashboard', [$post])->with('success', 'Post Deleted!');
     }

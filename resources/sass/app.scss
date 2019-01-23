@@ -98,15 +98,7 @@ ul li a {
   font-size: 3em;
 }
 
-p, .grey {
-  color: $font-grey;
-}
-
-h1, h2, h3, h4, h5, h6, a, .green {
-  color: $link-green;
-}
-
-a:hover {
+.link-style:hover, a:hover {
   color: $hover-blue;
   text-decoration: none;
 }
@@ -115,6 +107,15 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+p, .grey {
+  color: $font-grey;
+}
+
+h1, h2, h3, h4, h5, h6, a, .green {
+  color: $link-green;
+}
+
 
 
 //////// FRONT PAGE /////////////
@@ -128,16 +129,12 @@ a:hover {
   background-color: $fuxia;
   color: $link-green;
   text-align: center;
+  border-radius: 8px;
 }
 
 .post {
-  height: 100px;
-  overflow: hidden;
-}
-
-.read-more {
-  font-style: italic;
-  color: $fuxia;
+  height: 50px;
+  overflow: auto;
 }
 
 

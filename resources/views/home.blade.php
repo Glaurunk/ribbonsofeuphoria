@@ -10,11 +10,12 @@
     <h2 class="p-3">Latest Headlines!</h2>
 </div>
 
-<!-- Here starts Posts section -->
-
+<!-- Here starts Next Event section -->
   <div class="row pt-5">
     <div class="col-md-6">
-      <h3 class="text-center mb-3 h-with-link"><a href="/events{{ $event->id }}">{{ $event->title }} Live at {{ $event->place }}</a></h3>
+      <h3 class="text-center mb-3 h-with-link">
+        <a href="/events/{{ $event->id }}">{{ $event->title }}<br>
+           Live at {{ $event->place }}</a></h3>
           <p class="calendar p-3">
             <span class="font-size-3">
               <?php
@@ -32,6 +33,9 @@
     </div><!--Here ends upcoming events -->
 
 
+
+<!-- Here starts Latest Posts section -->
+
   <div class="col-md-6">
     @foreach ($posts as $post)
 
@@ -44,7 +48,7 @@
             <div class="col-md-8 col-sm-8">
                   <h4><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h4>
                   <small class="fuxia">{{ $post->created_at->day }} / {{ $post->created_at->month }} / {{ $post->created_at->year }}</small>
-                  <p class="mt-3">{{ $post->body }}</p>
+                  <p class="mt-3 post read-more">{{ $post->body }}</p>
 
             </div> <!-- here ends col -->
           </div> <!-- here ends row -->
@@ -69,16 +73,24 @@
 </div> <!--here ends text-center -->
   <div class="collapse" id="collapseExample">
   <div class="card card-body indigo">
-    <form>
+
+    <form method="post" action="/subscriptions">
       {{ csrf_field() }}
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text">You can easily unsubscribe at any time by sending us a blank email with the subject: unsubscribe</small>
-        </div>
+      <div class="form-group row">
+          <label for="email" class="">{{ __('E-Mail Address') }}</label>
+
+              <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+              @if ($errors->has('email'))
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $errors->first('email') }}</strong>
+                  </span>
+              @endif
+      </div>
         <br>
         <button type="submit" class="btn btn-primary">Subscribe!</button>
       </form>
+
   </div> <!--here ends card-body -->
 </div> <!--here ends collapse -->
 <!--END of hidden fields & form -->

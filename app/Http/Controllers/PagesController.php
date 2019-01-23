@@ -7,6 +7,7 @@ use Auth;
 use App\Post;
 use App\Event;
 use DB;
+use App\Subscription;
 use Carbon\Carbon;
 
 class PagesController extends Controller
@@ -14,13 +15,14 @@ class PagesController extends Controller
 
     public function home()
               {
-                $event = DB::table('events')
+                  $event = DB::table('events')
                     ->whereDate('date', '>', carbon::now())
                     ->orderBy('date', 'asc')
                     ->first();
                   $posts = Post::orderBy('created_at', 'desc')->take(3)->get();
-                  return view('home')->with('posts', $posts)
-                  ->with('event', $event);
+                  return view('home')
+                    ->with('posts', $posts)
+                    ->with('event', $event);
               }
 
     public function policy()
@@ -52,7 +54,7 @@ class PagesController extends Controller
                     ->get();
                 $future_events->shift();
                 $past_events = Event::where('date', '<', carbon::now() )->paginate(10);
-                $next_event = DB::table('events')
+                $event = DB::table('events')
                     ->whereDate('date', '>', carbon::now())
                     ->orderBy('date', 'asc')
                     ->first();
@@ -60,7 +62,7 @@ class PagesController extends Controller
                     ->with('posts', $posts)
                     ->with('future_events', $future_events)
                     ->with('past_events', $past_events)
-                    ->with('next_event', $next_event);
+                    ->with('event', $event);
               }
 
     public function contact()
@@ -75,22 +77,26 @@ class PagesController extends Controller
 
                   $future_events = DB::table('events')
                       ->whereDate('date', '>', carbon::now())
-                      ->orderBy('date', 'desc')
+                      ->orderBy('date', 'asc')
                       ->get();
+                  $future_events->shift();
                   $past_events = Event::where('date', '<', carbon::now() )->paginate(10);
-                  $next_event = DB::table('events')
+                  $event = DB::table('events')
                       ->whereDate('date', '>', carbon::now())
                       ->orderBy('date', 'asc')
                       ->first();
+                  $subscriptions = DB::table('subscriptions')
+                      ->paginate(15);
 
                   return view('dashboard')
                     ->with('posts', $posts)
                     ->with('future_events', $future_events)
                     ->with('past_events', $past_events)
-                    ->with('next_event', $next_event);
+                    ->with('event', $event)
+                    ->with('subscriptions', $subscriptions);
 
                 } else {
-                  return view('auth.login')->with('error', 'Please login first!');
+                  return redirect('/login')->with('error', 'Please login first!');
                 }
               }
 
@@ -99,7 +105,5 @@ class PagesController extends Controller
                 Auth::logout();
                 return redirect('/')->with('success', 'You have logged out!');;
               }
-
-
 
 }
