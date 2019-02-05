@@ -48,6 +48,6 @@
 
 @else
 
-  <p>No events found</p>
+  <p>No future events.</p>
 
 @endif

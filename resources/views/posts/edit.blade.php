@@ -22,7 +22,7 @@
 
         <div class="form-group">
           <label for="category">Category</label>
-          <select class="form-control" id="category" name="category">
+          <select class="form-control" id="category" name="category" value="{{ $post->category }}">
             <option>Insider</option>
             <option>Press</option>
             <option>Opinions</option>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            <input type="file" name="cover_image">
+            <input type="file" name="cover_image" value="{{ $post->cover_image }}">
             <small class="form-text">Choose a picture for your post.</small>
         </div>
 

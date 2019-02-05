@@ -34,6 +34,7 @@ body {
 //header
 .logo {
   height: 45px;
+  margin: 0 auto;
 }
 
 .header-float {
@@ -53,6 +54,10 @@ body {
 }
 
 .second-navbar {
+  display: none;
+}
+
+.show-on-large {
   display: none;
 }
 
@@ -152,6 +157,40 @@ h1, h2, h3, h4, h5, h6, a, .green {
     margin: 0 auto;
 }
 
+// Cookies Consent
+.cookie-consent {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  background-color: $fuxia;
+  color: $link-green;
+  padding: 2em;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.cookie-consent__agree {
+  background-color: $link-green;
+  color: $fuxia;
+  border-radius: 8px;
+  display:block;
+  padding: 0.2em 4em;
+  margin: 1em auto;
+  cursor: pointer;
+}
+
+//login panel
+.log-banner {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  background-color: $fuxia;
+  color: $link-green;
+  padding: 1.2em 1em 0.5em 1em;
+  border-radius: 8px;
+  z-index: 9;
+}
+
 
 //////// BIO PAGE ///////////////////
 .bio-card {
@@ -235,6 +274,10 @@ ul.pagination li a {
   .second-navbar {
     display: flex;
     justify-content: center;
+  }
+
+  .show-on-large {
+    display: flex;
   }
 
   .divider {

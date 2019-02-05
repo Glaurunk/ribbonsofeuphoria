@@ -89,11 +89,11 @@ class PagesController extends Controller
                       ->paginate(15);
 
                   return view('dashboard')
-                    ->with('posts', $posts)
-                    ->with('future_events', $future_events)
-                    ->with('past_events', $past_events)
-                    ->with('event', $event)
-                    ->with('subscriptions', $subscriptions);
+                      ->with('posts', $posts)
+                      ->with('future_events', $future_events)
+                      ->with('past_events', $past_events)
+                      ->with('event', $event)
+                      ->with('subscriptions', $subscriptions);
 
                 } else {
                   return redirect('/login')->with('error', 'Please login first!');

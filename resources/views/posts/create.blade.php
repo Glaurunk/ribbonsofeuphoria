@@ -12,16 +12,16 @@
 
       <div class="form-group">
           <label for="title">Title</label>
-          <input class="form-control" type="text" name="title" placeholder="the post's title">
+          <input class="form-control" type="text" name="title" placeholder="the post's title" value="{{ old('title') }}">
       </div>
 
       <div class="form-group">
-          <label  for="body">Body</label>
-          <textarea class="form-control" name="body" placeholder="some text here" id="summary-ckeditor"></textarea>
+          <label for="body">Body</label>
+          <textarea class="form-control" name="body" placeholder="some text here" id="summary-ckeditor" value="{{ old('body') }}"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="category">Category</label>
+        <label for="category" value="{{ old('category') }}">Category</label>
         <select class="form-control" id="category" name="category">
           <option>Insider</option>
           <option>Press</option>
@@ -32,7 +32,7 @@
       </div>
 
       <div class="form-group">
-          <input type="file" name="cover_image">
+          <input type="file" name="cover_image" value="{{ old('file') }}">
           <small class="form-text text-muted">Choose a picture for your post.</small>
       </div>
 

@@ -2,13 +2,14 @@
 
   <div class="card bg-none mb-2">
     <div class="card-block p-3">
-      <table class="table">
-            <thead class="">
+      <table class="table table-responsive">
+            <thead class="text-center">
               <tr>
                 <th scope="col">id</th>
                 <th scope="col">email</th>
                 <th scope="col">subscription date</th>
-                <th scope="col">delete subscriber</th>
+                <th scope="col">verified</th>
+                <th scope="col">action</th>
               </tr>
             </thead>
             <tbody>
@@ -19,6 +20,13 @@
                 <th class="align-middle"scope="row">{{ $subscription->id }}</th>
                 <td class="align-middle">{{ $subscription->email }}</td class="align-middle">
                 <td class="align-middle">{{ $subscription->created_at }}</td>
+                <td class="align-middle">
+                    @if ($subscription->verified)
+                      YES
+                    @else
+                      NO
+                    @endif
+                </td>
                 <td>
                   @if (\Request::is('dashboard'))
                     @if (!Auth::guest())

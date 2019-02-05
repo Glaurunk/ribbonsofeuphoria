@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-8 col-sm-8">
               <h4>{{ $post->title }}</h4>
-              <small class="fuxia">{{ $post->created_at->day }} / {{ $post->created_at->month }} / {{ $post->created_at->year }}</small>
+              <small class="fuxia">{{ $post->created_at->day }} / {{ $post->created_at->month }} / {{ $post->created_at->year }} | Category: <a href="/{{ $post->category }}">{{ $post->category }}</a></small>
               <p class="mt-3">{{ $post->body }}</p>
 
         </div> <!-- here ends col -->

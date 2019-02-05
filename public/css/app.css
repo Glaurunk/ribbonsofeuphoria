@@ -10510,6 +10510,7 @@ body {
 
 .logo {
   height: 45px;
+  margin: 0 auto;
 }
 
 .header-float {
@@ -10529,6 +10530,10 @@ body {
 }
 
 .second-navbar {
+  display: none;
+}
+
+.show-on-large {
   display: none;
 }
 
@@ -10625,6 +10630,38 @@ a,
   margin: 0 auto;
 }
 
+.cookie-consent {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  background-color: #aa2277;
+  color: #9cc34d;
+  padding: 2em;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.cookie-consent__agree {
+  background-color: #9cc34d;
+  color: #aa2277;
+  border-radius: 8px;
+  display: block;
+  padding: 0.2em 4em;
+  margin: 1em auto;
+  cursor: pointer;
+}
+
+.log-banner {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  background-color: #aa2277;
+  color: #9cc34d;
+  padding: 1.2em 1em 0.5em 1em;
+  border-radius: 8px;
+  z-index: 9;
+}
+
 .bio-card {
   max-width: 250px;
   background-color: #5c338a;
@@ -10695,6 +10732,10 @@ ul.pagination li a {
   .second-navbar {
     display: flex;
     justify-content: center;
+  }
+
+  .show-on-large {
+    display: flex;
   }
 
   .divider {

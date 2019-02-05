@@ -15,7 +15,7 @@ use App\Http\Controllers\EventsController;
 |
 */
 //PAGES
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@home')->name('home');
 Route::get('/policy', 'PagesController@policy');
 Route::get('/bio', 'PagesController@bio');
 Route::get('/music', 'PagesController@music');
@@ -27,6 +27,8 @@ Route::get('/logout', 'PagesController@logout');
 
 // SUBSCRIBE!
 Route::resource('subscriptions', 'SubscriptionController');
+Route::get('/subscription/verify/{token}', 'SubscriptionController@verifySubscription');
+Route::post('/known_subscriptions', 'SubscriptionController@knownSubscription');
 
 //POSTS
 Route::resource('posts', 'PostsController');
@@ -41,5 +43,5 @@ Route::get('/Press', 'CategoriesController@Press');
 Route::get('/Etcetera', 'CategoriesController@Etcetera');
 
 //Authentication - Verification
+//Auth::routes(['verify' => true]);
 Auth::routes(['register' => false]);
-Auth::routes(['verify' => true]);

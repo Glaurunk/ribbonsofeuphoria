@@ -1,10 +1,33 @@
 @extends('layout')
 @section('title', 'Home Page')
 @section('content')
-  <div class="col-sm-6 mx-auto">
-      <img src="images/jester.png" alt="jester" class="img-fluid">
-  </div><!-- end col -->
+  <!-- Here starts 3 columns main nav -->
+          <div class="row">
 
+              <div class="col-sm-4 mt-5 main-cols text-center">
+                <ul class="main-links-ul">
+                  <li><a href="{{ url('/bio')}}">The Band</a></li>
+                  <li><a href="{{ url('/music')}}">The Music</a></li>
+                  <li><a href="{{ url('/shop')}}">The Shop</a></li>
+                  <li><a href="{{ url('/blog')}}">The Blog</a></li>
+                </ul>
+              </div><!-- end col -->
+
+  <!-- 2nd col ith girl -->
+          <div class="col-sm-4 main-cols text-center">
+              <img src="{{ url('images/girlFuxia.png')}}" alt="girl" class="img-fluid">
+          </div><!-- end col -->
+  <!-- 3rd col with links --->
+          <div class="col-sm-4 align-self-end main-cols text-center">
+            <ul class="main-links-ul">
+              <li><a href="https://www.facebook.com/RibbonsOfEuphoriaBand/">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="https://www.instagram.com/ribbons.of.euphoria/">Instagram</a></li>
+              <li><a href="https://www.youtube.com/user/TheRibbonsofEuphoria">Youtube</a></li>
+              <li><a href="{{ url('/contact')}}">Contact</a></li>
+            </ul>
+          </div><!-- end col -->
+        </div><!-- row -->
 
 <div class="row mt-5 indigo justify-content-center">
     <h2 class="p-3">Latest Headlines!</h2>
@@ -13,6 +36,9 @@
 <!-- Here starts Next Event section -->
   <div class="row pt-5">
     <div class="col-md-6">
+
+@if (count($event) > 0)
+
       <h3 class="text-center mb-3 h-with-link">
         <a href="/events/{{ $event->id }}">{{ $event->title }}<br>
            Live at {{ $event->place }}</a></h3>
@@ -30,9 +56,18 @@
             </span><br>
             {{ $event->hour }}</p>
           <p class="text-justify">{{ $event->body }}</p>
-    </div><!--Here ends upcoming events -->
 
+@else
 
+          <h3 class=" mb-3 h-with-link">No upcoming events</h3>
+              <p class="p-3 calendar">
+                  <span class="font-size-3">Rock<br>on!</span><br>
+              </p>
+                  <p class="text-justify">Watch regularly for new concerts, events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
+
+@endif
+
+</div><!--Here ends upcoming events -->
 
 <!-- Here starts Latest Posts section -->
 
@@ -47,9 +82,7 @@
             </div>
             <div class="col-md-8 col-sm-8">
                   <h4><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h4>
-                  <small class="fuxia">{{ $post->created_at->day }} / {{ $post->created_at->month }} / {{ $post->created_at->year }}</small>
-                  <p class="mt-3 post read-more">{{ $post->body }}</p>
-
+                  <small class="fuxia">{{ $post->created_at->day }} / {{ $post->created_at->month }} / {{ $post->created_at->year }} | Category: <a href="/{{ $post->category }}">{{ $post->category }}</a></small>
             </div> <!-- here ends col -->
           </div> <!-- here ends row -->
         </div> <!-- here ends card block-->
@@ -106,9 +139,10 @@
 </div>
 
 <!-- Here starts video section -->
-<div class="text-center mb-5">
+<div class="text-center mb-5 pb-5">
 <iframe src="https://www.youtube.com/embed/videoseries?list=PLU_1E9-ekoBZXI5Wznq6Sqfqhu8Q3vXdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <!-- Here ends video Section -->
+</div><!-- end container -->
 
 @endsection
