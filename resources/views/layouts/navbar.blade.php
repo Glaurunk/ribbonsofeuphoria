@@ -2,19 +2,19 @@
 
       <ul class="nav second-navbar mb-5">
            <li class="nav-item active">
-             <a class="nav-link big" href="/bio">The Band <span class="sr-only">(current)</span></a>
+             <a class="nav-link big" href="{{ url('/bio')}}">The Band <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item">
-             <a class="nav-link big" href="/music">The Music</a>
+             <a class="nav-link big" href="{{ url('/music')}}">Music</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link big" href="/shop">The Shop</a>
+             <a class="nav-link big" href="{{ url('/shop')}}">Shop</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link big" href="/blog">The Blog</a>
+             <a class="nav-link big" href="{{ url('/blog')}}">Blog</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link big" href="/contact">Contact</a>
+             <a class="nav-link big" href="{{ url('/contact')}}">Contact</a>
            </li>
            <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle big" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

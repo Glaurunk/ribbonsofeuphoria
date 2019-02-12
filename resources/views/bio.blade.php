@@ -7,7 +7,14 @@
 
   <h4>Timeline</h4>
   <br>
-  <p>Ribbons of Euphoria is a combination of Psychedelic and progressive rock that blossomed at the end of 60’s and the 70’s. Their music is based on 60’s blues and rhythm & blues. Driven from different experiences and influncies of their band members, they combine these elements creating structured musical pieces, taking, at the same time, the advantage of rythmical and melodic improvisation.</p>
+  <p>Ribbons of Euphoria is a band, which, whilst keeping blues-rock as a basis, is flirting with psychedelic and progressive elements, thus composing a beautiful musical combination, which has the immediacy of the - good - old times.</p>
+<p>They were formed in late 2006 by Nick Poulakis (el. guitar, backing vocals), Thanos Karakantas (organ, bass, backing vocals) and Thanasis Stroggylis (drums). In the summer of 2007, Stavros Zouliatis (vocals) was added to the whole.</p>
+<p>With the exception of the singer Stavros Zouliatis, the rest of the members of the band have cooperated again in 'Pelotas En Fuego' since 1999, with Thanos Karakantas participating since 2005 and after.</p>
+<p>At the end of 2013 Nick Gousias (organ, backing vocals) was added to the group.
+Thanos Karakantas left the group (for a higher musical education) at the end of 2014 with Nick Gousias undertaking the bass-lines also!</p>
+<p>At 2017 the groups’ sound found balance again with adding Yannis Tziotziovillis at bass.</p>
+<p>The band aims to defend rock music and its stylistic culture, thus rendering it existent in a world that considers it lost for ever.</p>
+<p>Unrepentantly nostalgic of the '60s and '70s, Ribbons include their own compositions from their first two albums in their repertoire, but also many covers of well-known songs, which are performed with precision and respect to the sound and style of that era.</p>
   <h5>1st Album - Ribbons of Euhoria</h5>
   <p>Their first release came at 2014 by D-drop Recordings. The tracks are a combination of many influencies and inspirations of the band from its founding (2007) till the production of the album with the first recordings in 2011. Within 2 years of much personal trouble and colaboration with 3 different studios, finally came the moment where this album was ready for its first official presentation on 26/12/2014. Nostalgic of the old times, Ribbons of Euphoria release their self-titled album in vinyl, distributed to the public through Fuzz Overdose Records.</p>
   <h6 class="fuxia">Limited edition (500 copies) vinyl disc</h6>
@@ -88,6 +95,9 @@
   </div> <!--here ends col -->
 </div> <!--here ends row -->
 
+<h4 class="mt-5">Former Members</h4>
+
+<h4 class="mt-5">Assossiates</h4>
 
 
 @endsection

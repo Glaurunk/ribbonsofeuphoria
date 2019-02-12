@@ -48,7 +48,7 @@ class EventsController extends Controller
         $event->hour = $request->input('hour');
         $event->save();
 
-        return redirect()->action('PagesController@dashboard', [$event])->with('success', 'Event Created Successfully!');
+        return redirect()->action('AdminController@events', [$event])->with('success', 'Event Created Successfully!');
 
 }
 
@@ -84,7 +84,7 @@ class EventsController extends Controller
     $event->hour = $request->input('hour');
     $event->save();
 
-    return redirect()->action('PagesController@dashboard', [$event])->with('success', 'Event Updated!');
+    return redirect()->action('AdminController@events', [$event])->with('success', 'Event Created Successfully!');
 }
 
 
@@ -92,6 +92,6 @@ class EventsController extends Controller
   public function destroy(Event $event)
   {
     $event->delete();
-    return redirect()->action('PagesController@dashboard', [$event])->with('success', 'Event Deleted!');
+    return redirect()->back()->with('success', 'Event Deleted!');
   }
 }

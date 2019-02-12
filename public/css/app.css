@@ -10604,6 +10604,10 @@ a,
   color: #9cc34d;
 }
 
+.image-50 {
+  height: 700px;
+}
+
 .calendar {
   float: left;
   width: 50%;
@@ -10699,6 +10703,12 @@ ul.pagination li a {
   width: 100%;
 }
 
+@media screen and (min-width: 576px) {
+  .image-50 {
+    max-width: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   ul li a {
     font-size: 1.6em;
@@ -10742,6 +10752,10 @@ ul.pagination li a {
     height: 10px;
     clear: both;
   }
+
+  .image-50 {
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 995px) {
@@ -10751,6 +10765,10 @@ ul.pagination li a {
 
   .logo {
     height: 96px;
+  }
+
+  .image-50 {
+    height: auto;
   }
 }
 

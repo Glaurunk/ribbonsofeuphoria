@@ -1,8 +1,10 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
+<script src="{{ url('js/ckeditor.js') }}"></script>
 
-  <h3 class="text-center">Create a new Post</h3>
+
+<h3 class="text-center">Create a new Post</h3>
 
 
 <div class="card p-3 my-5">
@@ -17,7 +19,7 @@
 
       <div class="form-group">
           <label for="body">Body</label>
-          <textarea class="form-control" name="body" placeholder="some text here" id="summary-ckeditor" value="{{ old('body') }}"></textarea>
+          <textarea class="form-control" name="content" placeholder="some text here" id="editor" value="{{ old('body') }}"></textarea>
       </div>
 
       <div class="form-group">
@@ -31,15 +33,19 @@
         <small class="form-text text-muted">Choose a category for your post. Max width: 1999px</small>
       </div>
 
-      <div class="form-group">
-          <input type="file" name="cover_image" value="{{ old('file') }}">
-          <small class="form-text text-muted">Choose a picture for your post.</small>
-      </div>
 
       <button class="btn btn-success" type="submit" value="Submit" >Create post</button>
-      <a href="/dashboard" class="btn btn-secondary">Back to the dashboard</a>
+      <a href="{{ url('/admin')}}" class="btn btn-secondary">Back to the dashboard</a>
 
   </form>
 </div>
-
+<script>
+    ClassicEditor.create( document.querySelector( '#editor' ) )
+    .then( editor => {
+            console.log( editor );
+    } )
+    .catch( error => {
+            console.error( error );
+    } );
+</script>
 @endsection

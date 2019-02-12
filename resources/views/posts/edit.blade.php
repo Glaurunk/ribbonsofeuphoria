@@ -1,7 +1,8 @@
-@extends('layout')
+@extends('layouts.app')
 @section('title', 'Edit Post')
 
 @section('content')
+<script src="[ckeditor-build-path]/ckeditor.js"></script>
 
   <h3 class="text-center mb-5">Edit Post</h3>
 
@@ -31,18 +32,13 @@
           <small class="form-text">Choose a category for your post.</small>
         </div>
 
-        <div class="form-group">
-            <input type="file" name="cover_image" value="{{ $post->cover_image }}">
-            <small class="form-text">Choose a picture for your post.</small>
-        </div>
-
 <div class="row justify-conter-start py-3">
-  <div class="col-2">
+  <div class="col-auto">
     <button class="btn btn-primary btn-sm" type="submit" value="Submit">Update Post</button>
   </form>
   </div><!-- here ends col1 -->
 
-  <div class="col-2">
+  <div class="col-auto">
     <form class="form" action="/posts/{{ $post->id }}" method="post">
       {{ csrf_field() }}
       {{ method_field('delete') }}
@@ -50,8 +46,8 @@
     </form>
   </div><!-- here ends col2 -->
 
-  <div class="col-2">
-    <a href="/dashboard" class="btn btn-warning btn-sm">Cancel</a>
+  <div class="col-auto">
+    <a href="{{ url('/admin')}}" class="btn btn-warning btn-sm">Cancel</a>
   </div> <!-- here ends col3 -->
 </div> <!-- here ends row of buttons -->
 

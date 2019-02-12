@@ -22,8 +22,12 @@ Route::get('/music', 'PagesController@music');
 Route::get('/shop', 'PagesController@shop');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
-Route::get('/dashboard', 'PagesController@dashboard');
 Route::get('/logout', 'PagesController@logout');
+
+//ADMIN
+Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
+Route::get('/admin/events', 'AdminController@events');
+Route::get('/admin/posts', 'AdminController@posts');
 
 // SUBSCRIBE!
 Route::resource('subscriptions', 'SubscriptionController');
@@ -35,6 +39,9 @@ Route::resource('posts', 'PostsController');
 
 //EVENTS
 Route::resource('events', 'EventsController');
+
+//PHOTOS
+Route::resource('photos', 'PhotosController');
 
 //CATEGORIES
 Route::get('/Opinions', 'CategoriesController@Opinions');

@@ -1,26 +1,21 @@
-<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="description" content="Ribbons of Euphoria is psychedelic-progressive blues/rock band based in Athens-GREECE. They have recently released their second album 'Reaching for the Skies'.">
+        <meta name="keywords" content="ribbons,euphoria,psychedelic,rock,pschedelia">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sta8is @deepseacoding.com">
 
-<!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
+        {{-- <link rel="stylesheet" href="css/customCSS.css"> --}}
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ url('js/customJS.js') }}"></script>
+        <title>Ribbons of Euphoria | Dashboard</title>
 
-    <title>{{ config('app.name', 'Ribbons of Euphoria') }}</title>
-
-<!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-<!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-<!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
+    </head>
+    <body>
+      <div class="card container">
         <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -55,6 +50,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="{{ url('/admin') }}">Dashboard
+                                  </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -68,19 +65,21 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
-            </div>
+                </div> <!-- Here ends collapse navbar -->
+            </div><!-- Here ends container -->
         </nav>
 
-        <main class="py-4">
+      @include('layouts.messages')
+      @yield('content')
 
-          {{-- <div class="container alert alert-danger text-center py-3 mt-5">
-            <p class="">{{ $error }}</p>
-          </div> --}}
+<!-- Here starts footer -->
+      <div class="row justify-content-sm-center py-3">
+          <div class="col-sm-auto text-center">
+            <p>designed and created by <a href="https://deepseacoding.com">deepSeaCoding.com</a></p>
+      </div> <!-- Here ends col -->
+    </div> <!-- Here ends row -->
+<!-- Here ends footer -->
 
-            @include('layouts.messages')
-            @yield('content')
-        </main>
-    </div>
-</body>
+      </div> <!-- Here ends container -->
+  </body>
 </html>

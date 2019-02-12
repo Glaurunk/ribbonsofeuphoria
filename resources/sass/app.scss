@@ -124,6 +124,10 @@ h1, h2, h3, h4, h5, h6, a, .green {
 
 
 //////// FRONT PAGE /////////////
+.image-50 {
+  height: 700px;
+}
+
 
 
 // Posts section
@@ -156,6 +160,7 @@ h1, h2, h3, h4, h5, h6, a, .green {
 .video {
     margin: 0 auto;
 }
+
 
 // Cookies Consent
 .cookie-consent {
@@ -238,7 +243,12 @@ ul.pagination li a {
 
 
 /////////  MEDIA QUERIES //////////
+@media screen and (min-width: 576px) {
+  .image-50 {
+    max-width: none;
+  }
 
+}
 
 @media screen and (min-width: 768px) {
 
@@ -285,6 +295,10 @@ ul.pagination li a {
     clear:both;
   }
 
+  .image-50 {
+    height: auto;
+  }
+
 }
 
 
@@ -298,5 +312,8 @@ ul.pagination li a {
     height: 96px;
   }
 
+  .image-50 {
+    height: auto;
+  }
 
 }

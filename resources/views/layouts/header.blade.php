@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
         {{-- <link rel="stylesheet" href="css/customCSS.css"> --}}
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="js/customJS.js"></script>
+        <script src="{{ url('js/customJS.js') }}"></script>
         <title>Ribbons of Euphoria | @yield('title')</title>
 
     </head>
@@ -45,19 +45,19 @@
 <!--the main navigation-->
     <ul class="navbar-nav hidden">
        <li class="nav-item">
-         <a class="nav-link" href="/bio">The Band <span class="sr-only">(current)</span></a>
+         <a class="nav-link" href="{{ url('/bio')}}">The Band <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="/music">The Music</a>
+         <a class="nav-link" href="{{ url('/music')}}">Music</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="/shop">The Shop</a>
+         <a class="nav-link" href="{{ url('/shop')}}">Shop</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="/blog">The Blog</a>
+         <a class="nav-link" href="{{ url('/blog')}}">Blog</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="/contact">Contact</a>
+         <a class="nav-link" href="{{ url('/contact')}}">Contact</a>
        </li>
        <li class="nav-item dropdown">
            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

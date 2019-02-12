@@ -1,24 +1,25 @@
 @extends('layout')
 @section('title', 'Home Page')
 @section('content')
+
   <!-- Here starts 3 columns main nav -->
           <div class="row">
 
-              <div class="col-sm-4 mt-5 main-cols text-center">
+              <div class="col-sm-4 mt-5 main-cols text-center d-none d-md-block">
                 <ul class="main-links-ul">
                   <li><a href="{{ url('/bio')}}">The Band</a></li>
-                  <li><a href="{{ url('/music')}}">The Music</a></li>
-                  <li><a href="{{ url('/shop')}}">The Shop</a></li>
-                  <li><a href="{{ url('/blog')}}">The Blog</a></li>
+                  <li><a href="{{ url('/music')}}">Music</a></li>
+                  <li><a href="{{ url('/shop')}}">Shop</a></li>
+                  <li><a href="{{ url('/blog')}}">Blog</a></li>
                 </ul>
               </div><!-- end col -->
 
   <!-- 2nd col ith girl -->
-          <div class="col-sm-4 main-cols text-center">
-              <img src="{{ url('images/girlFuxia.png')}}" alt="girl" class="img-fluid">
+          <div class="col-sm-4 main-cols text-center justify-content-center mx-auto">
+              <img src="{{ url('images/girlFuxia.png')}}" alt="girl" class="img-fluid image-50">
           </div><!-- end col -->
   <!-- 3rd col with links --->
-          <div class="col-sm-4 align-self-end main-cols text-center">
+          <div class="col-sm-4 align-self-end main-cols text-center d-none d-md-block">
             <ul class="main-links-ul">
               <li><a href="https://www.facebook.com/RibbonsOfEuphoriaBand/">Facebook</a></li>
               <li><a href="#">Twitter</a></li>
@@ -33,29 +34,29 @@
     <h2 class="p-3">Latest Headlines!</h2>
 </div>
 
-<!-- Here starts Next Event section -->
+<!-- Here starts Next event section -->
   <div class="row pt-5">
     <div class="col-md-6">
 
-@if (count($event) > 0)
+@if (count($next_event) > 0)
 
       <h3 class="text-center mb-3 h-with-link">
-        <a href="/events/{{ $event->id }}">{{ $event->title }}<br>
-           Live at {{ $event->place }}</a></h3>
+        <a href="/events/{{ $next_event->id }}">{{ $next_event->title }}<br>
+           Live at {{ $next_event->place }}</a></h3>
           <p class="calendar p-3">
             <span class="font-size-3">
               <?php
-                $date = strtotime($event->date);
+                $date = strtotime($next_event->date);
                 echo date('j', $date);
               ?>
               <br>
               <?php
-                $date = strtotime($event->date);
+                $date = strtotime($next_event->date);
                 echo date('M', $date);
               ?>
             </span><br>
-            {{ $event->hour }}</p>
-          <p class="text-justify">{{ $event->body }}</p>
+            {{ $next_event->hour }}</p>
+          <p class="text-justify">{{ $next_event->body }}</p>
 
 @else
 
@@ -63,7 +64,7 @@
               <p class="p-3 calendar">
                   <span class="font-size-3">Rock<br>on!</span><br>
               </p>
-                  <p class="text-justify">Watch regularly for new concerts, events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
+                  <p class="text-justify">Watch regularly for new concerts, next_events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
 
 @endif
 
@@ -129,20 +130,32 @@
 <!--END of hidden fields & form -->
 
   <p class="text-center">and be the first to know about
-  <br> upcoming events and new releases!</p>
+  <br> upcoming next_events and new releases!</p>
 </div><!-- here ends subscribe -->
 <!-- Here ends Subscribe Section -->
 
 
+<!-- Here starts video section -->
 <div class="row my-5 indigo justify-content-center">
     <h2 class="p-3">Featured Videos!</h2>
 </div>
 
-<!-- Here starts video section -->
 <div class="text-center mb-5 pb-5">
-<iframe src="https://www.youtube.com/embed/videoseries?list=PLU_1E9-ekoBZXI5Wznq6Sqfqhu8Q3vXdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/videoseries?list=PLU_1E9-ekoBZXI5Wznq6Sqfqhu8Q3vXdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <!-- Here ends video Section -->
+
+
+<!-- Here starts photo section -->
+<div class="row my-5 indigo justify-content-center">
+    <h2 class="p-3">Photo Gallery</h2>
+</div>
+<!-- Here ends photo Section -->
+
+
+
 </div><!-- end container -->
+
+
 
 @endsection

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -38,7 +38,7 @@
       </div>
 
       <button class="btn btn-success" type="submit" value="Submit" >Create event</button>
-      <a href="/dashboard" class="btn btn-secondary">Back to the dashboard</a>
+      <a href="/admin" class="btn btn-secondary">Back to the dashboard</a>
 
   </form>
 </div>

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('title', 'Dashboard')
 @section('content')
 
@@ -11,55 +11,37 @@
 
                 <div class="card-body">
                       <div class="card my-2">
-                        <a href="/events/create" class="btn btn-primary">Add a new Event</a>
+                        <a href="{{ url('/events/create') }}" class="btn btn-primary">Add a new Event</a>
                       </div>
                       <div class="card my-2">
-                        <a href="#events" class="btn btn-secondary">
+                        <a href="{{ url('/admin/events') }}" class="btn btn-secondary">
                           Manage Events
                         </a>
                       </div>
                       <div class="card my-2">
-                        <a href="/posts/create" class="btn btn-primary">Create a new Post</a>
+                        <a href="{{ url('/posts/create') }}" class="btn btn-primary">Create a new Post</a>
                       </div>
                       <div class="card my-2">
-                        <a href="#posts" class="btn btn-secondary">Manage Posts</a>
+                        <a href="{{ url('/admin/posts') }}" class="btn btn-secondary">Manage Posts</a>
                       </div>
                       <div class="card my-2">
-                        <a href="#subscriptions" class="btn btn-dark">Manage Subscriptions</a>
+                        <a href="#" class="btn btn-primary">Upload a new Image to the Library</a>
                       </div>
                       <div class="card my-2">
-                        <a href="/logout" class="btn btn-warning">Logout</a>
+                        <a href="{{ url('/photos') }}" class="btn btn-secondary">Manage Photo Library</a>
+                      </div>
+                      <div class="card my-2">
+                        <a href="{{ url('/admin/posts') }}" class="btn btn-secondary">Manage Front Page Photo Gallery</a>
+                      </div>
+                      <div class="card my-2">
+                        <a href="{{ url('/admin/subscriptions') }}" class="btn btn-secondary">Manage Subscriptions</a>
+                      </div>
+                      <div class="card my-2">
+                        <a href="{{ url('/logout') }}" class="btn btn-dark">Logout</a>
                       </div>
 
-<!-- MANAGE EVENTS CARD -->
-          <div class="" id="events">
-            <div class="card card-body indigo my-3">
-              <h1 class="fuxia text-center">Events</h1>
-              <hr>
+{{--
 
-              <h3 class="grey">Upcoming Event</h3>
-              @include('events.next_event')
-              <hr>
-
-              <h3 class="grey">Future Events</h3>
-              @include('events.index')
-              <hr>
-
-              <h3 class="grey">Past Events</h3>
-              @include('events.past_events')
-            </div>
-            <a href="#top">to top</a>
-          </div>
-
-<!-- POSTS CARDS -->
-          <div class="" id="posts">
-            <div class="card card-body indigo my-3">
-              <h1 class="fuxia text-center">Posts</h1>
-              <hr>
-              @include('posts.index')
-            </div>
-            <a href="#top">to top</a>
-          </div>
 
 <!-- SUBSCRIPTIONS CARD -->
           <div class="" id="subscriptions">
@@ -95,7 +77,7 @@
                         <!--END form -->
             </div>
             <a href="#top">to top</a>
-          </div>
+          </div> --}}
 
 
 
@@ -106,7 +88,6 @@
           </div> <!-- here ends col -->
       </div> <!-- here ends row -->
   </div> <!-- here ends Card container -->
-</div>
 
 
 

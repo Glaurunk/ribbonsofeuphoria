@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('title', 'Edit event')
 
 @section('content')
@@ -37,12 +37,12 @@
 
 
 <div class="row justify-conter-start py-3">
-  <div class="col-2">
+  <div class="col-auto">
     <button class="btn btn-primary btn-sm" type="submit" value="Submit">Update event</button>
   </form>
 </div> <!-- here ends col1 -->
 
-  <div class="col-2">
+  <div class="col-auto">
     <form class="form" action="/events/{{ $event->id }}" method="event">
       {{ csrf_field() }}
       {{ method_field('delete') }}
@@ -50,8 +50,8 @@
     </form>
   </div> <!-- here ends col2 -->
 
-  <div class="col-2">
-    <a href="/dashboard" class="btn btn-warning btn-sm">Cancel</a>
+  <div class="col-auto">
+    <a href="/admin" class="btn btn-warning btn-sm">Cancel</a>
   </div> <!-- here ends col3 -->
 </div> <!-- here ends row of buttons -->
 
