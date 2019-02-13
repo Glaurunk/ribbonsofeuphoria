@@ -28,6 +28,7 @@ Route::get('/logout', 'PagesController@logout');
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 Route::get('/admin/events', 'AdminController@events');
 Route::get('/admin/posts', 'AdminController@posts');
+Route::get('/admin/dash_gallery', 'AdminController@gallery');
 
 // SUBSCRIBE!
 Route::resource('subscriptions', 'SubscriptionController');
@@ -41,7 +42,7 @@ Route::resource('posts', 'PostsController');
 Route::resource('events', 'EventsController');
 
 //PHOTOS
-Route::resource('photos', 'PhotosController');
+Route::resource('photos', 'PhotoController');
 
 //CATEGORIES
 Route::get('/Opinions', 'CategoriesController@Opinions');

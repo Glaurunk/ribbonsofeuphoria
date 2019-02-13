@@ -99,5 +99,5 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
 
 <h4 class="mt-5">Assossiates</h4>
 
-
+<a href="#top">back to top</a>
 @endsection

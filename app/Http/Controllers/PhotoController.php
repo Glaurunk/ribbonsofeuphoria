@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PhotoController extends Controller
 {
+
+    public function __construct()
+          {
+            $this->middleware('auth');
+          }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,8 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
+        $photos = Photo::orderby('created_at', 'desc')->paginate(10);
+        return view('photos.index', compact('photos'));
     }
 
     /**
@@ -24,7 +32,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('photos.create');
     }
 
     /**
@@ -35,7 +43,28 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request, [
+        'photo' => ['image', 'required', 'max:2048', 'mimes:jpeg,jpg,png,gif'],
+        'description' => 'nullable',
+    ]);
+// Create new filename and Store to disk
+        $image = $request->file('photo');
+        $filename = 'img-'.time().'.'.$image->getClientOriginalExtension();
+        $path = $request->file('photo')->storeAs('public/photos', $filename);
+// Create new photo instance
+        $photo = new Photo;
+        $photo->title = $request->input('title');
+        $photo->description = $request->input('description');
+        $photo->name = $filename;
+// put array of dimensions into a string
+        $dimensions = getimagesize('storage/photos/'.$filename);
+        $photo->dimensions = $dimensions[0].' width by '.$dimensions[1].' height.';
+// get filesize and save instance to db
+        $photo->size = $image->getClientSize();
+        $photo->save();
+
+        return redirect('/photos')
+            ->with('success', 'The image has been added to your Photo Library.');
     }
 
     /**
@@ -46,7 +75,7 @@ class PhotoController extends Controller
      */
     public function show(Photo $photo)
     {
-        //
+        return redirect()->back();
     }
 
     /**
@@ -57,7 +86,7 @@ class PhotoController extends Controller
      */
     public function edit(Photo $photo)
     {
-        //
+      return view('photos.edit', compact('photo'));
     }
 
     /**
@@ -69,7 +98,23 @@ class PhotoController extends Controller
      */
     public function update(Request $request, Photo $photo)
     {
-        //
+      if ($request->input('title') == '')
+      {
+        $photo->title = $photo->title;
+      } else {
+        $photo->title = $request->input('title');
+      }
+
+      if ($request->input('description') == '')
+      {
+        $photo->description = $photo->description;
+      } else {
+      $photo->description = $request->input('description');
+      }
+      $photo->save();
+
+      return redirect('/photos')
+          ->with('success', 'Image information updated successfully!');
     }
 
     /**
@@ -80,6 +125,9 @@ class PhotoController extends Controller
      */
     public function destroy(Photo $photo)
     {
-        //
+      $path = 'public/photos/'.$photo->name;
+      Storage::delete($path);
+      $photo->delete();
+      return redirect('/photos')->with('success', 'The image has been deleted from the library!');
     }
 }

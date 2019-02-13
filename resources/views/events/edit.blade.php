@@ -12,7 +12,7 @@
 
       <div class="form-group">
           <label for="title">Title</label>
-          <input class="form-control" type="text" name="title" placeholder="the event's title (if any)" value="{{ $event->title }}">
+          <input class="form-control" type="text" name="title" placeholder="{{ old('title') }}" value="{{ $event->title }}">
       </div> <!-- here ends form group -->
 
       <div class="form row">
@@ -32,13 +32,13 @@
 
       <div class="form-group">
           <label for="body" class="grey">Body</label>
-          <textarea class="form-control "name="body" placeholder="Description of the event (if any)" id="summary-ckeditor">{{ $event->body }}</textarea>
+          <textarea class="form-control "name="body" placeholder="{ $event->body }}">{{ $event->body }}</textarea>
       </div>
 
 
 <div class="row justify-conter-start py-3">
   <div class="col-auto">
-    <button class="btn btn-primary btn-sm" type="submit" value="Submit">Update event</button>
+    <button class="btn btn-secondary" type="submit" value="Submit">Update event</button>
   </form>
 </div> <!-- here ends col1 -->
 
@@ -46,12 +46,12 @@
     <form class="form" action="/events/{{ $event->id }}" method="event">
       {{ csrf_field() }}
       {{ method_field('delete') }}
-      <button type="submit" class="btn btn-danger btn-sm">Delete event</button>
+      <button type="submit" class="btn btn-dark">Delete event</button>
     </form>
   </div> <!-- here ends col2 -->
 
   <div class="col-auto">
-    <a href="/admin" class="btn btn-warning btn-sm">Cancel</a>
+    <a href="/admin" class="btn btn-light">Cancel</a>
   </div> <!-- here ends col3 -->
 </div> <!-- here ends row of buttons -->
 

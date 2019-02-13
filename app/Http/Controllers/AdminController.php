@@ -25,8 +25,15 @@ class AdminController extends Controller
 
   public function events()
         {
-            $future_events = Event::orderby('created_at', 'desc')->paginate(10);
-            return view('admin.dash_events', compact('future_events'));
+          $past_events = DB::table('events')
+            ->whereDate('date', '<', carbon::now())
+            ->orderBy('date', 'asc')
+            ->paginate(15);
+          $future_events = DB::table('events')
+            ->whereDate('date', '>', carbon::now())
+            ->orderBy('date', 'asc')
+            ->paginate(15);
+          return view('admin.dash_events', compact(['past_events','future_events' ]));
         }
 
   public function posts()
@@ -34,6 +41,11 @@ class AdminController extends Controller
             $posts = Post::orderby('created_at', 'desc')->paginate(10);
             return view('admin.dash_posts', compact('posts'));
         }
+
+  public function gallery()
+            {
+                return view('admin.dash_gallery');
+            }
 
 }
 

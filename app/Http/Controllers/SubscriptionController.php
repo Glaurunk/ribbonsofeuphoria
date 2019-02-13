@@ -23,6 +23,18 @@ class SubscriptionController extends Controller
               ]);
             }
 
+
+  public function index()
+            {
+              $subscriptions = Subscription::paginate(20);
+              return view('subscriptions.index', compact('subscriptions'));
+            }
+
+  public function create()
+            {
+                return view('subscriptions.create');
+            }
+
   public function store(Request $request)
             {
               $this->validate($request, [
@@ -56,8 +68,7 @@ class SubscriptionController extends Controller
   public function destroy(Subscription $subscription)
             {
                 $subscription->delete();
-                return redirect()
-                    ->action('PagesController@dashboard', [$subscription])
+                return redirect('subscriptions')
                     ->with('success', 'Subscriber Removed! Who needs that damn bastard anyway?!');
             }
 
@@ -92,9 +103,8 @@ class SubscriptionController extends Controller
                 $subscription->verified = true;
                 $subscription->save();
 
-                return redirect()
-                    ->action('PagesController@dashboard', [$subscription])
-                    ->with('success', 'Subscriber Added! Spam the bugger till his eyes bleed!!!');
+                return redirect('subscriptions')
+                    ->with('success', 'Subscriber Added!');
               }
 
 

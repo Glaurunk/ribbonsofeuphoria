@@ -84,7 +84,7 @@ class EventsController extends Controller
     $event->hour = $request->input('hour');
     $event->save();
 
-    return redirect()->action('AdminController@events', [$event])->with('success', 'Event Created Successfully!');
+    return redirect()->action('AdminController@events', [$event])->with('success', 'Event Updated!');
 }
 
 

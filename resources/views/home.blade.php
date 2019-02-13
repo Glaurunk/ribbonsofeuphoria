@@ -64,7 +64,7 @@
               <p class="p-3 calendar">
                   <span class="font-size-3">Rock<br>on!</span><br>
               </p>
-                  <p class="text-justify">Watch regularly for new concerts, next_events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
+                  <p class="text-justify">Watch regularly for new concerts, events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
 
 @endif
 
@@ -79,7 +79,7 @@
         <div class="card-block p-2">
           <div class="row">
             <div class="col-md-4 col-sm-4">
-                  <img class="mb-3 img-fluid" src="/storage/cover_images/{{ $post->cover_image }}" alt="image">
+                  <img class="mb-3 img-fluid" src="/storage/photos/{{ $post->cover_image }}" alt="image">
             </div>
             <div class="col-md-8 col-sm-8">
                   <h4><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h4>
@@ -130,7 +130,7 @@
 <!--END of hidden fields & form -->
 
   <p class="text-center">and be the first to know about
-  <br> upcoming next_events and new releases!</p>
+  <br> upcoming events and new releases!</p>
 </div><!-- here ends subscribe -->
 <!-- Here ends Subscribe Section -->
 

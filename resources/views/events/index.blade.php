@@ -44,7 +44,7 @@
 </div> <!-- here ends card -->
 
   @endforeach
-  {{-- <p>{{ $events->links() }}</p> --}}
+  {{-- <p>{{ $future_events->links() }}</p> --}}
 
 @else
 

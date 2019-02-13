@@ -11,7 +11,34 @@
 
     <h5 class="mt-5 mb-3">Latest News!</h5>
 
-@include('posts.index')
+    @if(count($posts) > 0)
+
+
+      @foreach ($posts as $post)
+
+        <div class="card bg-none mb-2">
+          <div class="card-block p-3">
+            <div class="row">
+              <div class="col-3">
+                    <img style="max-width: 120px" src="/storage/photos/{{ $post->cover_image }}" alt="image" class="rounded">
+              </div>
+              <div class="col-8">
+                    <h3><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h3>
+                    <small class="fuxia">{{ $post->created_at->day }} / {{ $post->created_at->month }} / {{ $post->created_at->year }} | Category: <a href="/{{ $post->category }}">{{ $post->category }}</a></small>
+              </div> <!-- here ends col -->
+            </div> <!-- here ends row -->
+          </div> <!-- here ends card block-->
+        </div> <!-- here ends card -->
+
+      @endforeach
+      <p>{{ $posts->links() }}</p>
+
+    @else
+
+      <p>No posts found</p>
+
+    @endif
+
 
 
     <h5 class="mt-5 mb-3">Other Upcoming!</h5>

@@ -25,61 +25,23 @@
                         <a href="{{ url('/admin/posts') }}" class="btn btn-secondary">Manage Posts</a>
                       </div>
                       <div class="card my-2">
-                        <a href="#" class="btn btn-primary">Upload a new Image to the Library</a>
+                        <a href="{{ url('/photos/create') }}" class="btn btn-primary">Upload a new Image to the Library</a>
                       </div>
                       <div class="card my-2">
                         <a href="{{ url('/photos') }}" class="btn btn-secondary">Manage Photo Library</a>
                       </div>
                       <div class="card my-2">
-                        <a href="{{ url('/admin/posts') }}" class="btn btn-secondary">Manage Front Page Photo Gallery</a>
+                        <a href="{{ url('/admin/dash_gallery') }}" class="btn btn-secondary">Manage Front Page Photo Gallery</a>
                       </div>
                       <div class="card my-2">
-                        <a href="{{ url('/admin/subscriptions') }}" class="btn btn-secondary">Manage Subscriptions</a>
+                        <a href="{{ url('/subscriptions/create') }}" class="btn btn-primary">Manually add a Subscriber to the Newsletter</a>
+                      </div>
+                      <div class="card my-2">
+                        <a href="{{ url('/subscriptions') }}" class="btn btn-secondary">Manage Subscriptions</a>
                       </div>
                       <div class="card my-2">
                         <a href="{{ url('/logout') }}" class="btn btn-dark">Logout</a>
                       </div>
-
-{{--
-
-
-<!-- SUBSCRIPTIONS CARD -->
-          <div class="" id="subscriptions">
-            <div class="card card-body indigo my-3">
-              <h1 class="fuxia text-center">Subscribers List</h1>
-              <hr>
-              @include('subscriptions')
-
-<!-- MANUAL SUBSCRIBTION FORM -->
-                      <div class="my-5 p-3 ">
-                          <div class="card card-body indigo">
-                            <h1 class="fuxia text-center">Manual Subscription Form</h1>
-                            <hr>
-                            <form method="post" action="/known_subscriptions">
-                              {{ csrf_field() }}
-                                <div class="form-group row">
-                                  <label for="email" class="grey">{{ __('E-Mail Address') }}</label>
-
-                                      <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                      @if ($errors->has('email'))
-                                          <span class="invalid-feedback" role="alert">
-                                              <strong>{{ $errors->first('email') }}</strong>
-                                          </span>
-                                      @endif
-                                      <small class="grey mt-2">Enter an email address you know and dont need to validate.</small>
-                                  </div>
-                                <br>
-                                <button type="submit" class="btn btn-secondary float-right">Subscribe him!!</button>
-                              </form>
-
-                          </div> <!--here ends card-body -->
-                        <!--END form -->
-            </div>
-            <a href="#top">to top</a>
-          </div> --}}
-
-
 
 <!-- Closing tags -->
 
@@ -88,8 +50,5 @@
           </div> <!-- here ends col -->
       </div> <!-- here ends row -->
   </div> <!-- here ends Card container -->
-
-
-
 
 @endsection

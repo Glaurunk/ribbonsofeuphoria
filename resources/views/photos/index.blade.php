@@ -6,33 +6,33 @@
   <div class=" card-body indigo my-3">
 
       <table class="table table-hover">
-        <a href="{{ url('posts/create') }}" class="btn btn-light btn-sm">Add new</a>
+        <a href="{{ url('/photos/create') }}" class="btn btn-sm btn-light float-left">Add new</a>
         <h3 class="bg-green text-light text-center py-3">
-          Posts Table</h3>
+          Photos Table</h3>
         <thead class="bg-green text-light">
           <tr>
-            <th scope="col">Cover Image</th>
+            <th scope="col">Image</th>
+            <th scope="col">Uploaded On</th>
             <th scope="col">Title</th>
-            <th scope="col">Created On</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
 
-@if(count($posts) > 0)
+@if(count($photos) > 0)
 
-    @foreach ($posts as $post)
+    @foreach ($photos as $photo)
           <tr>
-            <th scope="row"><a href="/posts/{{ $post->id }}"><img src="/storage/photos/{{ $post->cover_image }}" alt="cover" style="max-width:120px;"></a></th>
-            <td>{{ $post->title }}</td>
-            <td>{{ $post->created_at }}</td>
+            <th scope="row"><img class="img-fluid" src="/storage/photos/{{ $photo->name }}" alt="Photo" style="max-width: 120px;"></th>
+            <td>{{ $photo->created_at }}</td>
+            <td>{{ $photo->title }}</td>
             <td>
               <div class="row align-self-start">
-                <form class="" action="/posts/{{ $post->id}}" method="post">
+                <form class="" action="/photos/{{ $photo->id}}" method="post">
                 {{ csrf_field() }}
                 {{ method_field('delete')}}
-                <button type="submit" name="button" class="btn fuxia btn-sm" onclick="confirmDelete()">Delete post</button>
-                <a href="/posts/{{ $post->id}}/edit" class="btn green btn-sm">Edit post</a>
+                <button type="submit" name="button" class="btn fuxia btn-sm" onclick="confirmDelete()">Delete photo</button>
+                <a href="/photos/{{ $photo->id}}/edit" class="btn green btn-sm">Edit photo info</a>
                 </form>
               </div>
             </td>
@@ -42,7 +42,7 @@
         </tbody>
       </table>
 
-      <p>{{ $posts->links() }}</p>
+      <p>{{ $photos->links() }}</p>
       <a href="{{ url('/admin')}}">back to dashboard</a>
 
 
