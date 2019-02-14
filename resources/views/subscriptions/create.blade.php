@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Dashboard')
 @section('content')
 <!-- MANUAL SUBSCRIBTION FORM -->
 <div class="row justify-content-center my-5 p-3 ">

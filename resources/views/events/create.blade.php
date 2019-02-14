@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Dashboard')
 @section('content')
 
   <h3 class="text-center">Create a new Event</h3>

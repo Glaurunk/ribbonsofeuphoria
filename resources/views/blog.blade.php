@@ -46,9 +46,9 @@
 @include('events.index')
 
 <div class="mt-5 mb-2">
-  <button class="btn link-style green" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="font-size: 1.2em;">
+  <a href="#"class="link-style green" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="font-size: 1.2em;">
     Archived concerts
-  </button>
+  </a>
 </div> <!--here ends text-center -->
   <div class="collapse" id="collapseExample">
   <div class="card card-body indigo mb-5">

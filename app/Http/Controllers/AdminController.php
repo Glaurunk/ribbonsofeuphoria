@@ -7,6 +7,7 @@ use App\Event;
 use DB;
 use Carbon\Carbon;
 use App\Post;
+use App\Photo;
 
 class AdminController extends Controller
 {
@@ -43,9 +44,33 @@ class AdminController extends Controller
         }
 
   public function gallery()
-            {
-                return view('admin.dash_gallery');
-            }
+        {
+          $not_in_carousels = DB::table('photos')
+            ->where('carousel', 0)
+            ->get();
+          $in_carousels = DB::table('photos')
+            ->where('carousel', 1)
+            ->get();
+          return view('admin.dash_gallery', compact(['in_carousels','not_in_carousels']));
+        }
+
+  public function addToCarousel(Request $request)
+        {
+            $id = $request->input('not_carousel_id');
+            $photo = Photo::find($id);
+            $photo->carousel = 1;
+            $photo->save();
+            return redirect()->back()->with('success', 'Photo added to Carousel.');
+        }
+
+  public function removeFromCarousel(Request $request)
+        {
+            $id = $request->input('carousel_id');
+            $photo = Photo::find($id);
+            $photo->carousel = 0;
+            $photo->save();
+            return redirect()->back()->with('success', 'Photo removed from Carousel.');
+        }
 
 }
 

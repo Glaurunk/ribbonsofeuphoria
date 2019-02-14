@@ -31,7 +31,7 @@
                         <a href="{{ url('/photos') }}" class="btn btn-secondary">Manage Photo Library</a>
                       </div>
                       <div class="card my-2">
-                        <a href="{{ url('/admin/dash_gallery') }}" class="btn btn-secondary">Manage Front Page Photo Gallery</a>
+                        <a href="{{ url('admin/gallery') }}" class="btn btn-secondary">Manage Front Page Photo Gallery</a>
                       </div>
                       <div class="card my-2">
                         <a href="{{ url('/subscriptions/create') }}" class="btn btn-primary">Manually add a Subscriber to the Newsletter</a>

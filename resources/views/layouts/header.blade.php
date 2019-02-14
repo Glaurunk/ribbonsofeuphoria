@@ -1,24 +1,6 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="Ribbons of Euphoria is psychedelic-progressive blues/rock band based in Athens-GREECE. They have recently released their second album 'Reaching for the Skies'.">
-        <meta name="keywords" content="ribbons,euphoria,psychedelic,rock,pschedelia">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Sta8is @deepseacoding.com">
-
-        <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
-        {{-- <link rel="stylesheet" href="css/customCSS.css"> --}}
-        <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="{{ url('js/customJS.js') }}"></script>
-        <title>Ribbons of Euphoria | @yield('title')</title>
-
-    </head>
-    <body>
-
-      <div class="wrapper">
-
+@include('layouts.head')
+<body>
+  <div class="wrapper">
 
 <!-- Here starts the header -->
 <div  id="top" class="container pt-3">
@@ -27,14 +9,14 @@
 
     <div class="row justify-content-center show-on-large">
       <a class="navbar-brand" href="{{ url('/') }}">
-        <img src="/images/ROE-logo.png" alt="logo" class="logo mx-auto">
+        <img src="{{ url('/images/ROE-logo.png')}}" alt="logo" class="logo mx-auto">
       </a>
     </div>
 
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
                 <a class="navbar-brand hidden" href="{{ url('/') }}">
-                  <img src="/images/ROE-logo.png" alt="logo" class="logo">
+                  <img src="{{ url('/images/ROE-logo.png')}}" alt="logo" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -71,7 +53,6 @@
            </div>
          </li>
      </ul>
-
 
                     </div><!--here ends collapse navbar -->
                 </div><!--here ends container -->

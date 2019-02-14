@@ -28,9 +28,13 @@ Route::get('/logout', 'PagesController@logout');
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 Route::get('/admin/events', 'AdminController@events');
 Route::get('/admin/posts', 'AdminController@posts');
-Route::get('/admin/dash_gallery', 'AdminController@gallery');
 
-// SUBSCRIBE!
+//CAROUSEL
+Route::get('/admin/gallery', 'AdminController@gallery');
+Route::post('/addtocarousel', 'AdminController@addToCarousel');
+Route::post('/removefromcarousel', 'AdminController@removeFromCarousel');
+
+// SUBSCRIBE
 Route::resource('subscriptions', 'SubscriptionController');
 Route::get('/subscription/verify/{token}', 'SubscriptionController@verifySubscription');
 Route::post('/known_subscriptions', 'SubscriptionController@knownSubscription');

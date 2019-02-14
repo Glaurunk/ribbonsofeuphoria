@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Edit Post')
-
+@section('title', 'Dashboard')
 @section('content')
 <script src="//cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 

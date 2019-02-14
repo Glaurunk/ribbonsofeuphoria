@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Edit event')
-
+@section('title', 'Dashboard')
 @section('content')
 
   <h3 class="text-center mb-5">Edit event</h3>

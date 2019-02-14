@@ -56,6 +56,8 @@ class PhotoController extends Controller
         $photo->title = $request->input('title');
         $photo->description = $request->input('description');
         $photo->name = $filename;
+        $photo->carousel = 0;
+        $photo->url= 'http://127.0.0.1:8000/storage/photos/'.$filename;
 // put array of dimensions into a string
         $dimensions = getimagesize('storage/photos/'.$filename);
         $photo->dimensions = $dimensions[0].' width by '.$dimensions[1].' height.';

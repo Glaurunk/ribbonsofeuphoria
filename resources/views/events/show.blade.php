@@ -1,6 +1,5 @@
 @extends('layout')
 @section('title', $event->title)
-
 @section('content')
 
   <!-- Events HTML -->

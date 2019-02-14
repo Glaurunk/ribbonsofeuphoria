@@ -140,9 +140,10 @@
     <h2 class="p-3">Featured Videos!</h2>
 </div>
 
-<div class="text-center mb-5 pb-5">
+<div class="text-center pb-3">
   <iframe src="https://www.youtube.com/embed/videoseries?list=PLU_1E9-ekoBZXI5Wznq6Sqfqhu8Q3vXdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<p class="text-center"><a href="https://www.youtube.com/user/TheRibbonsofEuphoria">More videos on Youtube!</a><p>
 <!-- Here ends video Section -->
 
 
@@ -150,11 +151,15 @@
 <div class="row my-5 indigo justify-content-center">
     <h2 class="p-3">Photo Gallery</h2>
 </div>
+<div class="row justify-content-center">
+  @include('layouts.carousel')
+</div>
+<p class="text-center mb-5">More photos on <a href="https://www.facebook.com/pg/RibbonsOfEuphoriaBand/photos/?ref=page_internal">Facebook</a> and on <a href="https://www.instagram.com/ribbons.of.euphoria/">Instagram!</a><p>
 <!-- Here ends photo Section -->
 
 
 
-</div><!-- end container -->
+{{-- </div><!-- end container --> --}}
 
 
 

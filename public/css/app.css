@@ -10634,6 +10634,11 @@ a,
   margin: 0 auto;
 }
 
+.carousel {
+  width: 400px;
+  height: 300px;
+}
+
 .cookie-consent {
   position: fixed;
   bottom: 2em;

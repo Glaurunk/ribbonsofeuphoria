@@ -32,3 +32,10 @@ function insertPhoto($url2) {
 // hide the modal
   $('#inputForm').modal('hide');
 }
+
+
+function  addToCarousel(name) {
+
+  $('#insert').modal('hide');
+
+}
