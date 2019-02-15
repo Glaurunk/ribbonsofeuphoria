@@ -11,6 +11,7 @@ use App\Subscription;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmSubscription;
+use App\Mail\newSubscriber;
 use App\VerifySubscription;
 
 class SubscriptionController extends Controller
@@ -68,8 +69,8 @@ class SubscriptionController extends Controller
   public function destroy(Subscription $subscription)
             {
                 $subscription->delete();
-                return redirect('subscriptions')
-                    ->with('success', 'Subscriber Removed! Who needs that damn bastard anyway?!');
+                return redirect('/subscriptions')
+                    ->with('success', 'Subscriber Removed!');
             }
 
 
@@ -81,13 +82,13 @@ class SubscriptionController extends Controller
                   if(!$subscription->verified) {
                       $verifySubscription->subscription->verified = 1;
                       $verifySubscription->subscription->save();
-                      $status = 'Thank you for subscribing! We will try our best to keep those newsletters coming with lots of good stuff! You can unsubscribe at any time by sending us a blank email with Subject: Unsubscribe.';
+                      Mail::to('ribbons.of.euphoria.band@gmail.com')->send(new newSubscriber($token));
                   }
               } else {
                   return redirect('/')->with('error', 'Sorry your email cannot be identified.');
               }
 
-        return redirect('/')->with('success', $status);
+        return redirect('/')->with('success', 'Thank you for subscribing! We will try our best to keep those newsletters coming with lots of good stuff! You can unsubscribe at any time by sending us a blank email with Subject: Unsubscribe.');
 
               }
 
@@ -103,7 +104,7 @@ class SubscriptionController extends Controller
                 $subscription->verified = true;
                 $subscription->save();
 
-                return redirect('subscriptions')
+                return redirect('/subscriptions')
                     ->with('success', 'Subscriber Added!');
               }
 

@@ -36,7 +36,7 @@
             </td>
             <td>
               <div class="row align-self-start">
-                <form class="" action="/posts/{{ $subscription->id}}" method="post">
+                <form class="" action="/subscriptions/{{ $subscription->id}}" method="post">
                 {{ csrf_field() }}
                 {{ method_field('delete')}}
                 <button type="submit" name="button" class="btn fuxia btn-sm" onclick="confirmDelete()">Delete Subscriber</button>

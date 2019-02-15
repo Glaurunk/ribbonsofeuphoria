@@ -128,13 +128,13 @@ h1, h2, h3, h4, h5, h6, a, .green {
   height: 700px;
 }
 
-
+.icon {
+  height: 50px;
+  padding: 5px;
+}
 
 // Posts section
 .calendar {
-  float:left;
-  width: 50%;
-  margin-right: 15px;
   background-color: $fuxia;
   color: $link-green;
   text-align: center;

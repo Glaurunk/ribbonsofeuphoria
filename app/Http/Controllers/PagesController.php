@@ -9,12 +9,24 @@ use App\Event;
 use DB;
 use App\Subscription;
 use Carbon\Carbon;
+use Mapper;
 
 class PagesController extends Controller
 {
 
     public function home()
       {
+          $long = '37.973436';
+          $lat = '23.725832';
+          $setplace = DB::table('places')
+            ->where('active', '1')->first();
+          if ($setplace != '')
+          {
+            $long = $setplace->long;
+            $lat = $setplace->lat;
+          }
+          Mapper::map($long, $lat, ['zoom' => 16]);
+
           $not_in_carousels = DB::table('photos')
             ->where('carousel', 0)
             ->get();

@@ -40,6 +40,9 @@
                         <a href="{{ url('/subscriptions') }}" class="btn btn-secondary">Manage Subscriptions</a>
                       </div>
                       <div class="card my-2">
+                        <a href="{{ url('/admin/map') }}" class="btn btn-secondary">Configure Google Map</a>
+                      </div>
+                      <div class="card my-2">
                         <a href="{{ url('/logout') }}" class="btn btn-dark">Logout</a>
                       </div>
 

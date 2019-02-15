@@ -11,73 +11,85 @@
                   <li><a href="{{ url('/music')}}">Music</a></li>
                   <li><a href="{{ url('/shop')}}">Shop</a></li>
                   <li><a href="{{ url('/blog')}}">Blog</a></li>
+                  <li><a href="{{ url('/contact')}}">Contact</a></li>
                 </ul>
               </div><!-- end col -->
 
-  <!-- 2nd col ith girl -->
+  <!-- 2nd col with girl -->
           <div class="col-sm-4 main-cols text-center justify-content-center mx-auto">
               <img src="{{ url('images/girlFuxia.png')}}" alt="girl" class="img-fluid image-50">
           </div><!-- end col -->
   <!-- 3rd col with links --->
           <div class="col-sm-4 align-self-end main-cols text-center d-none d-md-block">
             <ul class="main-links-ul">
-              <li><a href="https://www.facebook.com/RibbonsOfEuphoriaBand/">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="https://www.instagram.com/ribbons.of.euphoria/">Instagram</a></li>
-              <li><a href="https://www.youtube.com/user/TheRibbonsofEuphoria">Youtube</a></li>
-              <li><a href="{{ url('/contact')}}">Contact</a></li>
+              <li><a href="https://www.facebook.com/RibbonsOfEuphoriaBand/"><img src="{{ url('/images/facebook.png')}}" alt="facebook" class="icon"></a></li>
+              <li><a href="#"><img src="{{ url('/images/twitter.png')}}" alt="twitter" class="icon"></a></li>
+              <li><a href="https://www.instagram.com/ribbons.of.euphoria/"><img src="{{ url('/images/instagram.png')}}" alt="instagram" class="icon"></a></li>
+              <li><a href="https://www.youtube.com/user/TheRibbonsofEuphoria"><img src="{{ url('/images/youtube.png')}}" alt="youtube" class="icon"></a></li>
             </ul>
           </div><!-- end col -->
         </div><!-- row -->
 
-<div class="row mt-5 indigo justify-content-center">
-    <h2 class="p-3">Latest Headlines!</h2>
-</div>
+
 
 <!-- Here starts Next event section -->
-  <div class="row pt-5">
-    <div class="col-md-6">
+
 
 @if (count($next_event) > 0)
+  <div class="row mt-5 indigo justify-content-center">
+      <h2 class="p-3">Upcoming Event!</h2>
+  </div>
+    <div class="row pt-5">
+      <div class="col-md-4">
+        <h3 class="text-center mb-3 h-with-link">
+          <a href="/events/{{ $next_event->id }}">{{ $next_event->title }}<br>
+             Live at {{ $next_event->place }}</a></h3>
+            <p class="calendar p-3 mx-3">
+              <span class="font-size-3">
+                <?php
+                  $date = strtotime($next_event->date);
+                  echo date('j', $date);
+                ?>
+                <br>
+                <?php
+                  $date = strtotime($next_event->date);
+                  echo date('M', $date);
+                ?>
+              </span><br>
+              {{ $next_event->hour }}</p>
 
-      <h3 class="text-center mb-3 h-with-link">
-        <a href="/events/{{ $next_event->id }}">{{ $next_event->title }}<br>
-           Live at {{ $next_event->place }}</a></h3>
-          <p class="calendar p-3">
-            <span class="font-size-3">
-              <?php
-                $date = strtotime($next_event->date);
-                echo date('j', $date);
-              ?>
-              <br>
-              <?php
-                $date = strtotime($next_event->date);
-                echo date('M', $date);
-              ?>
-            </span><br>
-            {{ $next_event->hour }}</p>
-          <p class="text-justify">{{ $next_event->body }}</p>
+      </div><!--Here ends upcoming events -->
+      <div class="col-md-7 mx-3 rounded" style="width:100%; height:266px">
+        {!! Mapper::render() !!}
+      </div>
+</div> <!--here ends row -->
 
 @else
+  <div class="row my-5 indigo justify-content-center">
+      <h2 class="p-3">No Upcoming Events</h2>
+  </div>    <div class="row justify-content-center">
 
-          <h3 class=" mb-3 h-with-link">No upcoming events</h3>
-              <p class="p-3 calendar">
-                  <span class="font-size-3">Rock<br>on!</span><br>
-              </p>
-                  <p class="text-justify">Watch regularly for new concerts, events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
-
+      <div class="col-4 mx-3">
+        <p class="p-3 calendar">
+            <span class="font-size-3">Rock<br>on!</span><br>
+        </p>
+      </div>
+      <div class="col-4 mx-3 align-self-center">
+        <p class="text-justify ">Watch regularly for new concerts, events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
+      </div>
+    </div>
 @endif
 
-</div><!--Here ends upcoming events -->
-
 <!-- Here starts Latest Posts section -->
+<div class="row my-5 indigo justify-content-center">
+    <h2 class="p-3">Latest News!</h2>
+</div>
 
-  <div class="col-md-6">
     @foreach ($posts as $post)
 
       <div class="card bg-none">
         <div class="card-block p-2">
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-4 col-sm-4">
                   <img class="mb-3 img-fluid" src="/storage/photos/{{ $post->cover_image }}" alt="image">
             </div>
@@ -90,10 +102,6 @@
       </div> <!-- here ends card -->
 
     @endforeach
-
-
-  </div> <!--here ends latest posts -->
-</div> <!--here ends row -->
 <!-- Here ends Post Section -->
 
 <!-- Here starts subscribe section -->

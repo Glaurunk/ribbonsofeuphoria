@@ -22,7 +22,7 @@ class ConfirmSubscription extends Mailable
     public function build()
     {
         return $this
-            ->from('ribbonsofeuphoria@gmail.com')
+            ->from('ribbons.of.euphoria.band@gmail.com')
             ->view('emails.confirm-subscription');
     }
 }

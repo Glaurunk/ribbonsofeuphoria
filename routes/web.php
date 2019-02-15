@@ -28,6 +28,8 @@ Route::get('/logout', 'PagesController@logout');
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 Route::get('/admin/events', 'AdminController@events');
 Route::get('/admin/posts', 'AdminController@posts');
+Route::get('admin/map', 'AdminController@mapper');
+Route::post('admin/map', 'AdminController@setToMap');
 
 //CAROUSEL
 Route::get('/admin/gallery', 'AdminController@gallery');
@@ -47,6 +49,9 @@ Route::resource('events', 'EventsController');
 
 //PHOTOS
 Route::resource('photos', 'PhotoController');
+
+//PLACES
+Route::resource('places', 'PlaceController');
 
 //CATEGORIES
 Route::get('/Opinions', 'CategoriesController@Opinions');

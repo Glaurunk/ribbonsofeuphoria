@@ -8,6 +8,8 @@ use DB;
 use Carbon\Carbon;
 use App\Post;
 use App\Photo;
+use App\Place;
+use Mapper;
 
 class AdminController extends Controller
 {
@@ -72,20 +74,34 @@ class AdminController extends Controller
             return redirect()->back()->with('success', 'Photo removed from Carousel.');
         }
 
-}
+  public function mapper()
+        {
+          $long = '37.973436';
+          $lat = '23.725832';
+          $places = Place::all();
+          $setplace = DB::table('places')
+            ->where('active', '1')->first();
+          if ($setplace != '')
+          {
+            $long = $setplace->long;
+            $lat = $setplace->lat;
+          }
+          Mapper::map($long, $lat, ['zoom' => 16]);
+          return view('admin.dash_map', compact('places'));
+        }
 
-// if (!Auth::guest()) {
-//   $posts = Post::orderBy('created_at','desc')->paginate(10);
-//
-//   $future_events = DB::table('events')
-//       ->whereDate('date', '>', carbon::now())
-//       ->orderBy('date', 'asc')
-//       ->get();
-//   $future_events->shift();
-//   $past_events = Event::where('date', '<', carbon::now() )->paginate(10);
-//   $event = DB::table('events')
-//       ->whereDate('date', '>', carbon::now())
-//       ->orderBy('date', 'asc')
-//       ->first();
-//   $subscriptions = DB::table('subscriptions')
-//       ->paginate(15);
+  public function setToMap(Request $request)
+        {
+            $id = $request->input('place_id');
+            $places = Place::all();
+            foreach ($places as $place) {
+              $place->active = 0;
+              $place->save();
+            }
+            $setonmap = Place::find($id);
+            $setonmap->active = 1;
+            $setonmap->save();
+            return redirect('/admin/map')
+              ->with('success', 'Google Maps now is configured. This view will remain until you set another place.');
+        }
+}
