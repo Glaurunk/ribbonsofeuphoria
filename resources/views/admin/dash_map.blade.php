@@ -27,7 +27,7 @@
                       <div class="form-group col-4">
                         <label for="longitude">Longitude</label>
                         <input type="text" class="form-control" id="long" value="{{ old('longitude') }}" name="longitude">
-                        <small>Insert 8 digits separated by dot. Example: 41.40338</small>
+                        <small>Insert exactly 8 digits separated by dot. Example: 12.345678</small>
                       </div>
                       <div class="form-group col-4">
                         <label for="latitude">Latitude</label>

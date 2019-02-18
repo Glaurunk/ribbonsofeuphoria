@@ -1,6 +1,7 @@
 @include('layouts.head')
 <body>
   <div class="wrapper">
+  @include('layouts.if-login')
 
 <!-- Here starts the header -->
 <div  id="top" class="container pt-3">

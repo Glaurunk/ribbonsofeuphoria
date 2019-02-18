@@ -44,8 +44,8 @@ class PlaceController extends Controller
     {
           $this->validate($request, [
             'name' => 'required',
-            'longitude' => 'required|min:8',
-            'latitude' =>'required|min:8'
+            'longitude' => 'required|regex:/\d{2}\.\d{6}/',
+            'latitude' =>'required|regex:/\d{2}\.\d{6}/'
           ]);
 
           $place = new Place;

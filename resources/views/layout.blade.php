@@ -1,5 +1,3 @@
-@include('layouts.if-login')
-
 @include('layouts.header')
 
 @if (\Route::current()->getName() !== 'home')

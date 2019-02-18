@@ -39,7 +39,6 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
 
   <h4 class="mt-5">The Members</h4>
   <br>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <!--The cards -->
   <div class="row">
@@ -49,7 +48,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
         <h5 class="card-title text-center">Stavros Zouliatis</h5>
         <p class="card-text text-center fuxia">Vocals - Percussion</p>
         <img class="card-img-top mb-3" src="/images/Stavros.png" alt="Stavros">
-        <p class="card-text">He likes pizza and believes in Santa Claus and tooth fairies</p>
+        <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
   </div> <!--here ends col -->
@@ -59,7 +58,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
         <h5 class="card-title text-center">Nick Poulakis</h5>
         <p class="card-text text-center fuxia">Guitar - Backing vocals</p>
         <img class="card-img-top mb-3" src="/images/Nikos.png" alt="Nikos">
-        <p class="card-text">He likes beer and swares he once saw an elephant flying...</p>
+        <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
   </div> <!--here ends col -->
@@ -69,7 +68,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
         <h5 class="card-title text-center">Thanasis Strogilis</h5>
         <p class="card-text text-center fuxia">Drums</p>
         <img class="card-img-top mb-3" src="/images/Thanassis.png" alt="Thanassis">
-        <p class="card-text">He likes milk & cocoa and believes in animals rights...</p>
+        <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
   </div> <!--here ends col -->
@@ -79,7 +78,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
         <h5 class="card-title text-center">Nick Gousias</h5>
         <p class="card-text text-center fuxia">Keyboards - Backing vocals</p>
         <img class="card-img-top mb-3" src="/images/NikosG.png" alt="NikosG">
-        <p class="card-text">He likes pink sunglasses and thinks babies are brought by storks.</p>
+        <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
   </div> <!--here ends col -->
@@ -89,15 +88,15 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
         <h5 class="card-title text-center">Yannis Tziotziovillis</h5>
         <p class="card-text text-center fuxia">Bass</p>
         <img class="card-img-top mb-3" src="/images/Yannis.png" alt="Yannis">
-        <p class="card-text">He likes italian food and believes the apocalyspse will come as an alien invasion...</p>
+        <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
   </div> <!--here ends col -->
 </div> <!--here ends row -->
 
-<h4 class="mt-5">Former Members</h4>
+{{-- <h4 class="mt-5">Former Members</h4>
 
-<h4 class="mt-5">Assossiates</h4>
+<h4 class="mt-5">Assossiates</h4> --}}
 
-<a href="#top">back to top</a>
+<p class="pb-5"><a href="#top">back to top</a></p>
 @endsection
