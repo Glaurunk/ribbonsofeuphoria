@@ -52,7 +52,7 @@ class PhotoController extends Controller
         $image = $request->file('photo');
         $filename = 'img-'.time().'.'.$image->getClientOriginalExtension();
         $size = $image->getClientSize();
-        $path = $request->file('photo')->move('public/gallery', $filename);
+        $path = $request->file('photo')->move('gallery', $filename);
 // Create new photo instance
         $photo = new Photo;
         $photo->title = $request->input('title');
@@ -61,7 +61,7 @@ class PhotoController extends Controller
         $photo->carousel = 0;
         $photo->url= 'http://127.0.0.1:8000/gallery/'.$filename;
 // put array of dimensions into a string
-        $dimensions = getimagesize('public/gallery/'.$filename);
+        $dimensions = getimagesize('gallery/'.$filename);
         $photo->dimensions = $dimensions[0].' width by '.$dimensions[1].' height.';
 // get filesize and save instance to db
         $photo->size = $size;

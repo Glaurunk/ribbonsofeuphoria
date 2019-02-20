@@ -25,7 +25,7 @@
 
           @foreach ($in_carousels as $in_carousel)
                 <tr>
-                  <th scope="row"><img class="img-fluid" src="/public/gallery/{{ $in_carousel->name }}" alt="Photo" style="max-width: 120px;"></th>
+                  <th scope="row"><img class="img-fluid" src="/gallery/{{ $in_carousel->name }}" alt="Photo" style="max-width: 120px;"></th>
                   <td>{{ $in_carousel->name }}</td>
                   <td>
                     <div class="row align-self-start">

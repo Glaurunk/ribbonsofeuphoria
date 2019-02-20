@@ -7,7 +7,7 @@
     <div class="card-block p-3">
       <div class="row">
         <div class="col-md-4 col-sm-4">
-              <img style="width: 100%" src="/public/gallery/{{ $post->cover_image }}" alt="image">
+              <img style="width: 100%" src="/gallery/{{ $post->cover_image }}" alt="image">
         </div>
         <div class="col-md-8 col-sm-8">
               <h4>{{ $post->title }}</h4>

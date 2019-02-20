@@ -35,8 +35,8 @@
 <!-- Enter from URL part -->
       <div class="form-group mb-5">
           <p style="color:black;">Cover Image</p>
-          <img name="img" class="img-fluid" id="cover" alt="cover" src="/images/noimage.jpg" style="max-width:120px;">
-          <p id="photoPath" class="py-2 green">noimage.jpg</p>
+          <img name="img" class="img-fluid" id="cover" alt="cover" src="/gallery/{{ $post->cover_image }}" style="max-width:120px;">
+          <p id="photoPath" class="py-2 green">{{ $post->cover_image }}</p>
           <button type="button" class="btn btn-light btn-sm bt-3" data-toggle="modal" data-target="#inputForm">Change Cover Image or Copy image path</button><br>
           <input type="hidden" name="photo" value="" id="inputField">
       </div>
@@ -55,7 +55,7 @@
                 <div class="row p-3 light-grey">
                     @foreach ($photos as $photo)
                       <div class="col-3">
-                          <img class="thumbnail img-fluid" src="/public/gallery/{{ $photo->name }}" alt="Photo">
+                          <img class="thumbnail img-fluid" src="/gallery/{{ $photo->name }}" alt="Photo">
                           <a href="#" class="pt-2 fuxia" onclick="copyToInput('{{ $photo->name }}')" >{{ $photo->name }}</a>
                           <a href="#" onclick="insertPhoto('{{ $photo->name }}')">copy to clipboard</a>
                       </div>
