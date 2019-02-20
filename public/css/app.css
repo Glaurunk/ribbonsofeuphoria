@@ -10577,6 +10577,10 @@ ul li a {
   font-size: 3em;
 }
 
+.font-size-2-3 {
+  font-size: 2em;
+}
+
 .link-style:hover,
 a:hover {
   color: #1d68a7;
@@ -10713,6 +10717,10 @@ ul.pagination li a {
 @media screen and (min-width: 576px) {
   .image-50 {
     max-width: none;
+  }
+
+  .font-size-2-3 {
+    font-size: 3em;
   }
 }
 

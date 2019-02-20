@@ -69,12 +69,12 @@
       <h2 class="p-3">No Upcoming Events</h2>
   </div>    <div class="row justify-content-center">
 
-      <div class="col-4 mx-3">
+      <div class="col-sm-4 mx-3">
         <p class="p-3 calendar">
             <span class="font-size-3">Rock<br>on!</span><br>
         </p>
       </div>
-      <div class="col-4 mx-3 align-self-center">
+      <div class="col-sm-4 mx-3 align-self-center">
         <p class="text-justify ">Watch regularly for new concerts, events and new releases! Follow us at the social media of your choice and subscribe to our newsletter to never miss a concert again!</p>
       </div>
     </div>
