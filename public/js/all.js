@@ -7,7 +7,7 @@
 
 require('./bootstrap');
 //1 line commented out
-//window.Vue = require('vue');
+window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -30,9 +30,9 @@ require('./bootstrap');
  */
 
 //3 lines comented out
-//const app = new Vue({
-//    el: '#app'
-//});
+const app = new Vue({
+    el: '#app'
+});
 
 
 window._ = require('lodash');

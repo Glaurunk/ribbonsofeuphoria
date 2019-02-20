@@ -91,7 +91,7 @@
         <div class="card-block p-2">
           <div class="row justify-content-center">
             <div class="col-md-4 col-sm-4">
-                  <img class="mb-3 img-fluid" src="/storage/photos/{{ $post->cover_image }}" alt="image">
+                  <img class="mb-3 img-fluid" src="/gallery/{{ $post->cover_image }}" alt="image">
             </div>
             <div class="col-md-8 col-sm-8">
                   <h4><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h4>

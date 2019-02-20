@@ -25,7 +25,7 @@
 
           @foreach ($in_carousels as $in_carousel)
                 <tr>
-                  <th scope="row"><img class="img-fluid" src="/storage/photos/{{ $in_carousel->name }}" alt="Photo" style="max-width: 120px;"></th>
+                  <th scope="row"><img class="img-fluid" src="/public/gallery/{{ $in_carousel->name }}" alt="Photo" style="max-width: 120px;"></th>
                   <td>{{ $in_carousel->name }}</td>
                   <td>
                     <div class="row align-self-start">
@@ -69,7 +69,7 @@
 
             @foreach ($not_in_carousels as $not_in_carousel)
               <div class="col-3">
-                  <img class="thumbnail img-fluid" src="/storage/photos/{{ $not_in_carousel->name }}" alt="Photo">
+                  <img class="thumbnail img-fluid" src="/public/gallery/{{ $not_in_carousel->name }}" alt="Photo">
                   <form class="" action="{{ url('/addtocarousel')}}" method="post">
                     {{ csrf_field() }}
                     <input type="hidden" name="not_carousel_id" value="{{ $not_in_carousel->id }}">

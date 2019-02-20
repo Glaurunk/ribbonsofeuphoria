@@ -20,7 +20,7 @@
           <div class="card-block p-3">
             <div class="row">
               <div class="col-3">
-                    <img style="max-width: 120px" src="/storage/photos/{{ $post->cover_image }}" alt="image" class="rounded">
+                    <img style="max-width: 120px" src="/gallery/{{ $post->cover_image }}" alt="image" class="rounded">
               </div>
               <div class="col-8">
                     <h3><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h3>

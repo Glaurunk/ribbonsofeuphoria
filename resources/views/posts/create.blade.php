@@ -56,7 +56,7 @@
                 <div class="row p-3 light-grey">
                     @foreach ($photos as $photo)
                       <div class="col-3">
-                          <img class="thumbnail img-fluid" src="/storage/photos/{{ $photo->name }}" alt="Photo">
+                          <img class="thumbnail img-fluid" src="/public/gallery/{{ $photo->name }}" alt="Photo">
                           <a href="#" class="pt-2 fuxia" onclick="copyToInput('{{ $photo->name }}')" >{{ $photo->name }}</a>
                           <a href="#" onclick="insertPhoto('{{ $photo->name }}')">copy to clipboard</a>
                       </div>

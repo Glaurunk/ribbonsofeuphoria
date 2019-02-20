@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use File;
 
 class PhotoController extends Controller
 {
@@ -50,19 +51,20 @@ class PhotoController extends Controller
 // Create new filename and Store to disk
         $image = $request->file('photo');
         $filename = 'img-'.time().'.'.$image->getClientOriginalExtension();
-        $path = $request->file('photo')->storeAs('public/photos', $filename);
+        $size = $image->getClientSize();
+        $path = $request->file('photo')->move('public/gallery', $filename);
 // Create new photo instance
         $photo = new Photo;
         $photo->title = $request->input('title');
         $photo->description = $request->input('description');
         $photo->name = $filename;
         $photo->carousel = 0;
-        $photo->url= 'http://127.0.0.1:8000/storage/photos/'.$filename;
+        $photo->url= 'http://127.0.0.1:8000/gallery/'.$filename;
 // put array of dimensions into a string
-        $dimensions = getimagesize('storage/photos/'.$filename);
+        $dimensions = getimagesize('public/gallery/'.$filename);
         $photo->dimensions = $dimensions[0].' width by '.$dimensions[1].' height.';
 // get filesize and save instance to db
-        $photo->size = $image->getClientSize();
+        $photo->size = $size;
         $photo->save();
 
         return redirect('/photos')
@@ -127,8 +129,8 @@ class PhotoController extends Controller
      */
     public function destroy(Photo $photo)
     {
-      $path = 'public/photos/'.$photo->name;
-      Storage::delete($path);
+      $path = 'public/gallery/'.$photo->name;
+      File::delete($path);
       $photo->delete();
       return redirect('/photos')->with('success', 'The image has been deleted from the library!');
     }

@@ -12,7 +12,7 @@
           <div class="card indigo">
               <div class="card-header">{{ $photo->name }}</div>
                 <div class="card-body">
-                  <img class="card-img-top" src="/storage/photos/{{ $photo->name }}" alt="image">
+                  <img class="card-img-top" src="/public/gallery/{{ $photo->name }}" alt="image">
                   <h5 class="py-3">Title: {{ $photo->title }}</h5>
                   <p>Description: <em>{{ $photo->description }}</em></p>
                   <p>Filesize: {{ $MB }}</p>

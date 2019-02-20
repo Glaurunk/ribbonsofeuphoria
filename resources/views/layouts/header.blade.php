@@ -1,7 +1,8 @@
 @include('layouts.head')
 <body>
   <div class="wrapper">
-  @include('layouts.if-login')
+
+    @include('layouts.if-login')
 
 <!-- Here starts the header -->
 <div  id="top" class="container pt-3">
@@ -10,14 +11,14 @@
 
     <div class="row justify-content-center show-on-large">
       <a class="navbar-brand" href="{{ url('/') }}">
-        <img src="{{ url('/images/ROE-logo.png')}}" alt="logo" class="logo mx-auto">
+        <img src="{{ url('/images/roe-logo.png')}}" alt="logo" class="logo mx-auto">
       </a>
     </div>
 
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
                 <a class="navbar-brand hidden" href="{{ url('/') }}">
-                  <img src="{{ url('/images/ROE-logo.png')}}" alt="logo" class="logo">
+                  <img src="{{ url('/images/roe-logo.png')}}" alt="logo" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

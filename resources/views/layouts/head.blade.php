@@ -9,8 +9,11 @@
         <meta name="author" content="Sta8is @deepseacoding.com">
 
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="{{ url('js/customJS.js') }}"></script>
+        <script src="{{ url('js/customjs.js') }}"></script>
         <title>Ribbons of Euphoria | @yield('title')</title>
 
     </head>

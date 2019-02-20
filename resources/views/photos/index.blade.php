@@ -24,7 +24,7 @@
 
     @foreach ($photos as $photo)
           <tr>
-            <th scope="row"><img class="img-fluid" src="/storage/photos/{{ $photo->name }}" alt="Photo" style="max-width: 120px;"></th>
+            <th scope="row"><img class="img-fluid" src="public/gallery/{{ $photo->name }}" alt="Photo" style="max-width: 120px;"></th>
             <td>{{ $photo->created_at }}</td>
             <td>{{ $photo->title }}</td>
             <td>

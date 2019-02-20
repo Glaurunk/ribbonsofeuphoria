@@ -24,7 +24,7 @@
 
     @foreach ($posts as $post)
           <tr>
-            <th scope="row"><a href="/posts/{{ $post->id }}"><img src="/storage/photos/{{ $post->cover_image }}" alt="cover" style="max-width:120px;"></a></th>
+            <th scope="row"><a href="/posts/{{ $post->id }}"><img src="/public/gallery/{{ $post->cover_image }}" alt="cover" style="max-width:120px;"></a></th>
             <td>{{ $post->title }}</td>
             <td>{{ $post->created_at }}</td>
             <td>

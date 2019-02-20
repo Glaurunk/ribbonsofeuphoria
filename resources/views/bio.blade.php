@@ -47,7 +47,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
       <div class="card-body">
         <h5 class="card-title text-center">Stavros Zouliatis</h5>
         <p class="card-text text-center fuxia">Vocals - Percussion</p>
-        <img class="card-img-top mb-3" src="/images/Stavros.png" alt="Stavros">
+        <img class="card-img-top mb-3" src="/images/stavros.png" alt="Stavros">
         <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
@@ -57,7 +57,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
       <div class="card-body">
         <h5 class="card-title text-center">Nick Poulakis</h5>
         <p class="card-text text-center fuxia">Guitar - Backing vocals</p>
-        <img class="card-img-top mb-3" src="/images/Nikos.png" alt="Nikos">
+        <img class="card-img-top mb-3" src="/images/nikos.png" alt="Nikos">
         <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
@@ -67,7 +67,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
       <div class="card-body">
         <h5 class="card-title text-center">Thanasis Strogilis</h5>
         <p class="card-text text-center fuxia">Drums</p>
-        <img class="card-img-top mb-3" src="/images/Thanassis.png" alt="Thanassis">
+        <img class="card-img-top mb-3" src="/images/thanassis.png" alt="Thanassis">
         <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
@@ -77,7 +77,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
       <div class="card-body">
         <h5 class="card-title text-center">Nick Gousias</h5>
         <p class="card-text text-center fuxia">Keyboards - Backing vocals</p>
-        <img class="card-img-top mb-3" src="/images/NikosG.png" alt="NikosG">
+        <img class="card-img-top mb-3" src="/images/nikosg.png" alt="NikosG">
         <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
@@ -87,7 +87,7 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
       <div class="card-body">
         <h5 class="card-title text-center">Yannis Tziotziovillis</h5>
         <p class="card-text text-center fuxia">Bass</p>
-        <img class="card-img-top mb-3" src="/images/Yannis.png" alt="Yannis">
+        <img class="card-img-top mb-3" src="/images/yannis.png" alt="Yannis">
         <p class="card-text"></p>
       </div> <!--here ends card-body -->
     </div> <!--here ends card -->
