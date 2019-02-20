@@ -17,7 +17,7 @@
 
   <!-- 2nd col with girl -->
           <div class="col-sm-4 main-cols text-center justify-content-center mx-auto">
-              <img src="{{ url('images/girlFuxia.png')}}" alt="girl" class="img-fluid image-50">
+              <img src="{{ url('images/girlfuxia.png')}}" alt="girl" class="img-fluid image-50">
           </div><!-- end col -->
   <!-- 3rd col with links --->
           <div class="col-sm-4 align-self-end main-cols text-center d-none d-md-block">
@@ -75,7 +75,7 @@
         </p>
       </div>
       <div class="col-4 mx-3 align-self-center">
-        <p class="text-justify ">Watch regularly for new concerts, events and new releases! Follow us at the social media of your chioce and subscribe to our newsletter to never miss a concert again!</p>
+        <p class="text-justify ">Watch regularly for new concerts, events and new releases! Follow us at the social media of your choice and subscribe to our newsletter to never miss a concert again!</p>
       </div>
     </div>
 @endif
