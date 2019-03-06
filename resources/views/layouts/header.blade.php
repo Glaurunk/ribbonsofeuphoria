@@ -48,7 +48,7 @@
              Social
            </a>
            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <a class="dropdown-item" href="https://www.facebook.com/RibbonsOfEuphoriaBand/">Facebook</a>
+             <a class="dropdown-item" href="https://www.facebook.com/RibbonsOfEuphoria/">Facebook</a>
              <a class="dropdown-item" href="#">Twitter</a>
              <a class="dropdown-item" href="https://www.instagram.com/ribbons.of.euphoria/">Instagram</a>
              <a class="dropdown-item" href="https://www.youtube.com/user/TheRibbonsofEuphoria">Youtube</a>

@@ -6,7 +6,7 @@
 <div class="">
   <div class=" card-body indigo my-3">
 
-      <table class="table table-hover">
+      <table class="table table-hover table-responsive-md">
         <a href="{{ url('posts/create') }}" class="btn btn-light btn-sm">Add new</a>
         <h3 class="bg-green text-light text-center py-3">
           Posts Table</h3>

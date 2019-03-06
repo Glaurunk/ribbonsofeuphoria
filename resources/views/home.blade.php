@@ -22,7 +22,7 @@
   <!-- 3rd col with links --->
           <div class="col-sm-4 align-self-end main-cols text-center d-none d-md-block">
             <ul class="main-links-ul">
-              <li><a href="https://www.facebook.com/RibbonsOfEuphoriaBand/"><img src="{{ url('/images/facebook.png')}}" alt="facebook" class="icon"></a></li>
+              <li><a href="https://www.facebook.com/RibbonsOfEuphoria/"><img src="{{ url('/images/facebook.png')}}" alt="facebook" class="icon"></a></li>
               <li><a href="#"><img src="{{ url('/images/twitter.png')}}" alt="twitter" class="icon"></a></li>
               <li><a href="https://www.instagram.com/ribbons.of.euphoria/"><img src="{{ url('/images/instagram.png')}}" alt="instagram" class="icon"></a></li>
               <li><a href="https://www.youtube.com/user/TheRibbonsofEuphoria"><img src="{{ url('/images/youtube.png')}}" alt="youtube" class="icon"></a></li>
@@ -162,7 +162,7 @@
 <div class="row justify-content-center">
   @include('layouts.carousel')
 </div>
-<p class="text-center mb-5">More photos on <a href="https://www.facebook.com/pg/RibbonsOfEuphoriaBand/photos/?ref=page_internal">Facebook</a> and on <a href="https://www.instagram.com/ribbons.of.euphoria/">Instagram!</a><p>
+<p class="text-center mb-5">More photos on <a href="https://www.facebook.com/pg/RibbonsOfEuphoria/photos/?ref=page_internal">Facebook</a> and on <a href="https://www.instagram.com/ribbons.of.euphoria/">Instagram!</a><p>
 <!-- Here ends photo Section -->
 
 

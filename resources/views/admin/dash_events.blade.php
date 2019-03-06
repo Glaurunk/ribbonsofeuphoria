@@ -19,7 +19,7 @@
 <div class="">
   <div class=" card-body indigo my-3 rounded">
 
-      <table class="table table-hover">
+      <table class="table table-hover table-responsive-md">
             <a href="{{ url('/events/create') }}" class="btn btn-sm btn-light mr-3">Add new</a>
             <button class="btn btn-secondary btn-sm" type="button" name="show" onclick="show()">Show Past Events</button>
         <h3 class="bg-green text-light text-center py-3">

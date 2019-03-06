@@ -7,6 +7,7 @@
         <meta name="keywords" content="ribbons,euphoria,psychedelic,rock,pschedelia">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Sta8is @deepseacoding.com">
+        <meta name="google-site-verification" content="FJBwpKX_Fs7p0rMLj_ROc-UzPu69aOnRW4vtAQKPx-w" />
 
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
