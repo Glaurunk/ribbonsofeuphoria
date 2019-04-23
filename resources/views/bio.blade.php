@@ -1,7 +1,7 @@
 @extends('layout')
-@section('title', 'Biographical Infoarmation')
+@section('title', 'The story so far')
 @section('content')
-  <h3 class="text-center ">Biographical Information</h3>
+  <h3 class="text-center ">The story so far</h3>
   <br>
   <br>
 
@@ -33,11 +33,12 @@ Thanos Karakantas left the group (for a higher musical education) at the end of 
     <li>Quincy's Dance Of Death</li>
   </ol>
 
-  <div class="text-center mt-5">
+  {{--Band Photo Placeholder
+ <div class="text-center mt-5">
     <img class="img-fluid" src="/images/group.jpg" alt="group">
-  </div>
+  </div> --}}
 
-  <h4 class="mt-5">The Members</h4>
+  <h4 class="mt-5">Members</h4>
   <br>
 
 <!--The cards -->

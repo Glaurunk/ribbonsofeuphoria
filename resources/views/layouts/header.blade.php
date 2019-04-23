@@ -29,7 +29,7 @@
 <!--the main navigation-->
     <ul class="navbar-nav hidden">
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/bio')}}">The Band <span class="sr-only">(current)</span></a>
+         <a class="nav-link" href="{{ url('/bio')}}">Bio<span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="{{ url('/music')}}">Music</a>

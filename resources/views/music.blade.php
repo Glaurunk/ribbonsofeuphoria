@@ -1,10 +1,10 @@
 @extends('layout')
 @section('title', 'The Music')
 @section('content')
-  <h3 class="text-center">The Music</h3>
+  <h3 class="text-center">Music</h3>
   <br>
   <br>
-  <div class="row">
+  <div class="row mb-5">
     <div class="col-sm-6"style="max-width: 700px;">
       <h4 class="mb-3 text-center">Ribbons of Euphoria</h4>
         <iframe class="mb-3" style="border: 0; width: 350px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=2303089512/size=large/bgcol=ffffff/linkcol=7137dc/transparent=true/" seamless><a href="http://ribbonsofeuphoria.bandcamp.com/album/ribbons-of-euphoria">Ribbons of Euphoria by Ribbons of Euphoria</a></iframe>
@@ -33,7 +33,4 @@
     </div> <!-- here ends col2 -->
   </div> <!-- here ends row -->
 
-  <div class="subscribe my-5 p-2 text-center">
-      <a class="green" href="https://ribbonsofeuphoria.bandcamp.com">listen in bandcamp!</a>
-  </div>
 @endsection

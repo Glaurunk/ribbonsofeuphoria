@@ -1,9 +1,8 @@
 @extends('layout')
 @section('title', 'Shop')
 @section('content')
-  <h3 class="text-center mb-5">The Shop</h3>
+  <h3 class="text-center mb-5">Shop</h3>
 
-  <h4>Physical Media</h4>
   <br>
   <div class="row">
     <div class="col-sm-6">
@@ -20,38 +19,35 @@
 
   <div class="subscribe p-3 my-5">
     <h4 class="text-center">Buy Now!</h4>
-    <p><a class="green" href="https://www.discogs.com/sell/list?artist_id=4339858&ev=ab">Buy from Discogs</a></p>
-    <p><a class="green" href="http://www.vinylmonster.gr/index.php?route=product/category&path=60_116">Buy from Vinyl
-    Monster</a></p>
-    <p><a class="green" href="https://www.facebook.com/pg/RibbonsOfEuphoriaBand/shop/?ref=page_internal">Buy from the band's shop in Facebook</a></p>
-    <p><a class="green" href="https://ribbonsofeuphoria.bandcamp.com">Buy the digital versions from Bandcamp</a></p>
+    <p class="py-3 text-center">
+      <a class="green" href="https://www.discogs.com/sell/list?artist_id=4339858&ev=ab">Discogs</a> |
+      <a class="green" href="http://www.vinylmonster.gr/index.php?route=product/category&path=60_116">Vinyl
+    Monster</a> |
+      <a class="green" href="https://www.facebook.com/pg/RibbonsOfEuphoriaBand/shop/?ref=page_internal">The band's shop in Facebook</a> |
+      <a class="green" href="https://ribbonsofeuphoria.bandcamp.com">The digital versions from Bandcamp</a>
+    </p>
   </div>
 
-  <h4>Wearables and memorabilia</h4>
+  <h4>Wearables &amp; memorabilia</h4>
   <br>
 
   <div class="row">
     <div class="col-sm-4">
         <img class="img-fluid mb-3" src="/images/tshirt1.jpg" alt="tshirt">
-        <p class="fuxia text-center">Ribbons of Euphoria purple T-shirt</p>
+        <p class="fuxia text-center">ROE purple T-shirt</p>
     </div> <!-- here ends col -->
     <div class="col-sm-4">
       <img class="img-fluid mb-3" src="/images/tshirt2.jpg" alt="tshirt">
-        <p class="fuxia text-center">Ribbons of Euphoria red T-shirt</p>
+        <p class="fuxia text-center">ROE red T-shirt</p>
     </div> <!-- here ends col -->
     <div class="col-sm-4">
       <img class="img-fluid mb-3" src="/images/tshirt3.jpg" alt="tshirt">
-      <p class="fuxia text-center">Ribbons of Euphoria cyan T-shirt</p>
+      <p class="fuxia text-center">ROE cyan T-shirt</p>
     </div> <!-- here ends col -->
     <div class="col-sm-4">
         <img class="img-fluid mb-3" src="/images/poster.png" alt="poster">
-        <p class="fuxia text-center">Ribbons of Euphoria Poster</p>
+        <p class="fuxia text-center">ROE Poster</p>
     </div> <!-- here ends col -->
   </div> <!-- here ends row -->
-
-  <div class="subscribe p-3 my-5">
-    <h4 class="text-center">Buy Now!</h4>
-    <p><a class="green" href="https://www.facebook.com/pg/RibbonsOfEuphoriaBand/shop/?ref=page_internal">Buy from the band's shop in Facebook</a></p>
-  </div>
 
 @endsection

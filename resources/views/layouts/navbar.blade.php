@@ -2,7 +2,7 @@
 
       <ul class="nav second-navbar mb-5">
            <li class="nav-item active">
-             <a class="nav-link big" href="{{ url('/bio')}}">The Band <span class="sr-only">(current)</span></a>
+             <a class="nav-link big" href="{{ url('/bio')}}">Bio<span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item">
              <a class="nav-link big" href="{{ url('/music')}}">Music</a>

@@ -1,4 +1,4 @@
-@if(count($next_event) > 0)
+@if($next_event != '')
 
 <!-- Events HTML -->
   <div class="card bg-none mb-2">

@@ -7,7 +7,7 @@
 
               <div class="col-sm-4 mt-5 main-cols text-center d-none d-md-block">
                 <ul class="main-links-ul">
-                  <li><a href="{{ url('/bio')}}">The Band</a></li>
+                  <li><a href="{{ url('/bio')}}">Bio</a></li>
                   <li><a href="{{ url('/music')}}">Music</a></li>
                   <li><a href="{{ url('/shop')}}">Shop</a></li>
                   <li><a href="{{ url('/blog')}}">Blog</a></li>
@@ -35,7 +35,7 @@
 <!-- Here starts Next event section -->
 
 
-@if (count($next_event) > 0)
+@if ($next_event != '')
   <div class="row mt-5 indigo justify-content-center">
       <h2 class="p-3">Upcoming Event!</h2>
   </div>
@@ -82,7 +82,7 @@
 
 <!-- Here starts Latest Posts section -->
 <div class="row my-5 indigo justify-content-center">
-    <h2 class="p-3">Latest News!</h2>
+    <h2 class="p-3">Latest News</h2>
 </div>
 
     @foreach ($posts as $post)
@@ -145,13 +145,12 @@
 
 <!-- Here starts video section -->
 <div class="row my-5 indigo justify-content-center">
-    <h2 class="p-3">Featured Videos!</h2>
+    <h2 class="p-3">Featured Videos</h2>
 </div>
 
 <div class="text-center pb-3">
   <iframe src="https://www.youtube.com/embed/videoseries?list=PLU_1E9-ekoBZXI5Wznq6Sqfqhu8Q3vXdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<p class="text-center"><a href="https://www.youtube.com/user/TheRibbonsofEuphoria">More videos on Youtube!</a><p>
 <!-- Here ends video Section -->
 
 
@@ -162,7 +161,6 @@
 <div class="row justify-content-center">
   @include('layouts.carousel')
 </div>
-<p class="text-center mb-5">More photos on <a href="https://www.facebook.com/pg/RibbonsOfEuphoria/photos/?ref=page_internal">Facebook</a> and on <a href="https://www.instagram.com/ribbons.of.euphoria/">Instagram!</a><p>
 <!-- Here ends photo Section -->
 
 
