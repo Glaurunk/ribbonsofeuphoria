@@ -30,6 +30,15 @@
           </div><!-- end col -->
         </div><!-- row -->
 
+<!-- Welcome Section -->
+<div class="row indigo justify-content-center my-3">
+  <div class="col-sm-10 mt-5 ">
+    <h1 class="text-center">Welcome to the Ribbons of Euphoria<br> official band site</h1>
+  </div>
+  <div class="col-sm-12 p-3 text-center"style="background-color: #aa2277">
+    <span style="color: #9cc34d">Check regularly for news, events and live shows. Shop music and memorabilia and help us keep on rocking! <br>Subscribe and stay tuned for more!</span>
+  </div>
+</div>
 
 
 <!-- Here starts Next event section -->

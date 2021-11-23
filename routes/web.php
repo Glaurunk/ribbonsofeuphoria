@@ -23,6 +23,10 @@ Route::get('/shop', 'PagesController@shop');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/logout', 'PagesController@logout');
+// New Shop Routes
+Route::get('/shop-new', 'PagesController@shop_new')->name('shop');
+Route::get('/cart', 'PagesController@cart')->name('cart');
+Route::get('/checkout', 'PagesController@checkout')->name('checkout');
 
 //ADMIN
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
