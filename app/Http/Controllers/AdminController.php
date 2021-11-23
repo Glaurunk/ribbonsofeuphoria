@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Event;
+use App\Models\Event;
 use DB;
 use Carbon\Carbon;
-use App\Post;
-use App\Photo;
-use App\Place;
+use App\Models\Post;
+use App\Models\Photo;
+use App\Models\Place;
 use Mapper;
 
 class AdminController extends Controller

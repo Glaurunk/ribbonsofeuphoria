@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-use App\Post;
-use App\Event;
+use App\Models\Post;
+use App\Models\Event;
 use DB;
-use App\Subscription;
+use App\Models\Subscription;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmSubscription;
 use App\Mail\newSubscriber;
-use App\VerifySubscription;
+use App\Models\VerifySubscription;
 
 class SubscriptionController extends Controller
 {
