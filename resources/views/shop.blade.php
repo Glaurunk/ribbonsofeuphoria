@@ -5,15 +5,20 @@
 
   <br>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-md-6 col-sm-12">
         <img class="img-fluid mb-3" src="/images/alboum1.jpg" alt="LP1">
         <p class="fuxia text-center">Ribbons of Euphoria</p>
         <p class="text-center">LP Vinyl Record Limited Edition. Also available on CD</p>
     </div> <!-- here ends col -->
-    <div class="col-sm-6">
+    <div class="col-md-6 col-sm-12">
         <img class="img-fluid mb-3" src="/images/alboum2.jpg" alt="LP2">
         <p class="fuxia text-center">Reaching for the skies</p>
         <p class="text-center">EP Vinyl Record Picture Disc, 165gr. Collectors edition. Printed in 300 copies</p>
+    </div> <!-- here ends col -->
+    <div class="col-md-6 col-sm-12">
+        <img class="img-fluid mb-3" src="/images/roe_you_dont_care.jpg" alt="LP3">
+        <p class="fuxia text-center">You don't care</p>
+        <p class="text-center">Limited edition 12" LP</p>
     </div> <!-- here ends col -->
   </div> <!-- here ends row -->
 

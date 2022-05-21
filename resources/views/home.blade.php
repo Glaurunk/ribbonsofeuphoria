@@ -32,11 +32,15 @@
 
 <!-- Welcome Section -->
 <div class="row indigo justify-content-center my-3">
-  <div class="col-sm-10 mt-5 ">
-    <h1 class="text-center">Welcome to the Ribbons of Euphoria<br> official band site</h1>
+  <div class="col-sm-10 mt-3">
+    <h1 class="text-center pb-3">Welcome to the Ribbons of Euphoria<br> official band site</h1>
   </div>
   <div class="col-sm-12 p-3 text-center"style="background-color: #aa2277">
     <span style="color: #9cc34d">Check regularly for news, events and live shows. Shop music and memorabilia and help us keep on rocking! <br>Subscribe and stay tuned for more!</span>
+  </div>
+  <div class="col-sm-12 mt-3">
+    <h4 class="my-3">New Release! You don't care. <a href="{{ url('/shop')}}">Buy Now!</a></h4>	
+    <img src="{{ url('images/roe_you_dont_care.jpg') }}" alt="3rd_alboum" class="img-fluid">
   </div>
 </div>
 
@@ -52,7 +56,7 @@
       <div class="col-md-4">
         <h3 class="text-center mb-3 h-with-link">
           <a href="/events/{{ $next_event->id }}">{{ $next_event->title }}<br>
-             Live at {{ $next_event->place }}</a></h3>
+             {{ $next_event->place }}</a></h3>
             <p class="calendar p-3 mx-3">
               <span class="font-size-3">
                 <?php
