@@ -18,7 +18,7 @@
     <div class="col-md-6 col-sm-12">
         <img class="img-fluid mb-3" src="/images/roe_you_dont_care.jpg" alt="LP3">
         <p class="fuxia text-center">You don't care</p>
-        <p class="text-center">Limited edition 12" LP</p>
+        <p class="text-center">Limited edition 12" LP. 180gr Transparent Orange color vinyl in deluxe Gatefold cover with lyric insert.</p>
     </div> <!-- here ends col -->
   </div> <!-- here ends row -->
 
