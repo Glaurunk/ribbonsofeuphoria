@@ -64,5 +64,5 @@ Route::get('/Press', 'CategoriesController@Press');
 Route::get('/Etcetera', 'CategoriesController@Etcetera');
 
 //Authentication - Verification
-//Auth::routes(['verify' => true]);
-Auth::routes(['register' => false]);
+Auth::routes();
+//Auth::routes(['register' => false]);

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Post;
+use App\Models\Post;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
